@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import api from "../services/api";
 import WeatherMap from "../components/WeatherMap";
+import api from "../services/api";
 
+ 
 // Local Backend//
 
 function Weather() {
@@ -15,6 +16,12 @@ function Weather() {
   const [lat, setLat] = useState(null);
   const [lon, setLon] = useState(null);
   const [farmLocation, setFarmLocation] = useState(null);
+  const response = await api.get("/weather-location", {
+  params: {
+    lat,
+    lon,
+  },
+});
   // -----------------------------
   // Get Current Location Weather
   // -----------------------------
