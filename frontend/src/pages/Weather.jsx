@@ -16,12 +16,7 @@ function Weather() {
   const [lat, setLat] = useState(null);
   const [lon, setLon] = useState(null);
   const [farmLocation, setFarmLocation] = useState(null);
-  const response = await api.get("/weather-location", {
-  params: {
-    lat,
-    lon,
-  },
-});
+   
   // -----------------------------
   // Get Current Location Weather
   // -----------------------------
