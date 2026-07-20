@@ -8,6 +8,9 @@ import Weather from "./pages/Weather";
 import MandiRates from "./pages/MandiRates";
 import Chatbot from "./pages/Chatbot";
 import ProfitCalculator from "./pages/ProfitCalculator";
+import Features from "./pages/Features";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -45,6 +48,9 @@ function App() {
           path="/profit-calculator"
           element={<ProfitCalculator />}
         />
+         <Route path="/features" element={<Features />} />
+<Route path="/about" element={<About />} />
+<Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
