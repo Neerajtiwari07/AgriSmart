@@ -1,26 +1,38 @@
-from wsgiref import headers
-
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+
 import pickle
 import pandas as pd
-from fastapi import UploadFile, File
 import requests
 import os
-import google.generativeai as genai
+
+from groq import Groq
 from dotenv import load_dotenv
 
+# Load .env file
 load_dotenv()
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# Read Groq API Key
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-genai.configure(api_key=GEMINI_API_KEY)
+if not GROQ_API_KEY:
+    raise ValueError("❌ GROQ_API_KEY not found in .env")
+
+# Initialize Groq Client
+client = Groq(
+    api_key=GROQ_API_KEY
+)
+
+print("✅ Groq API configured successfully")
+
+# FastAPI App
 app = FastAPI() 
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "http://localhost:5174",
         "https://agri-smart-nu.vercel.app",
     ],
     allow_credentials=True,
@@ -28,8 +40,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load Trained Model
-chat_model = genai.GenerativeModel("gemini-2.5-flash")
+# Load Crop Recommendation Model
 with open("models/crop_model.pkl", "rb") as f:
     crop_model = pickle.load(f)
 
@@ -111,28 +122,85 @@ def mandi(city: str):
         ]
     }
     
+
 @app.post("/chat")
 def chat(data: dict):
+
     try:
-        user_message = data.get("message")
 
-        prompt = f"""
-You are AgriSmart AI, an expert agricultural assistant.
+        user_message = data.get("message","").strip()
 
-Answer only agriculture-related questions.
-Reply in simple Hindi or English based on the user's language.
-Give practical advice for farmers.
+        if user_message == "":
+            return {
+                "success":False,
+                "reply":"Please enter a question."
+            }
 
-Farmer Question:
-{user_message}
+        completion = client.chat.completions.create(
+
+            model="llama-3.3-70b-versatile",
+
+            temperature=0.5,
+
+            messages=[
+
+                {
+                    "role":"system",
+
+                    "content":"""
+
+You are AgriSmart AI.
+
+You are an expert Agriculture Assistant.
+
+Rules:
+
+1. Answer only farming related questions.
+
+2. If user asks unrelated questions politely refuse.
+
+3. Support Hindi and English.
+
+4. Keep answers short and practical.
+
+5. Give fertilizer suggestions if needed.
+
+6. Give disease treatment if needed.
+
+7. Give irrigation advice whenever useful.
+
 """
 
-        response = chat_model.generate_content(prompt)
+                },
 
-        return {"reply": response.text}
+                {
+                    "role":"user",
+                    "content":user_message
+                }
+
+            ]
+
+        )
+
+        answer = completion.choices[0].message.content
+
+        return {
+
+            "success":True,
+
+            "reply":answer
+
+        }
 
     except Exception as e:
-        return {"reply": f"Error: {str(e)}"}
+
+        return {
+
+            "success":False,
+
+            "reply":str(e)
+
+        }
     
 @app.get("/weather-location")
 def weather_location(lat: float, lon: float):

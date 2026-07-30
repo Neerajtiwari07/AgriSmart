@@ -10,6 +10,7 @@ function Chatbot() {
 
     const userMessage = message;
 
+    // User message
     setChat((prev) => [
       ...prev,
       {
@@ -33,13 +34,26 @@ function Chatbot() {
         },
       ]);
     } catch (error) {
-      console.error(error);
+      console.error("Axios Error:", error);
+
+      let errorMessage = "❌ Unable to connect to server.";
+
+      if (error.response) {
+        console.log("Status:", error.response.status);
+        console.log("Data:", error.response.data);
+
+        errorMessage =
+          error.response.data.reply ||
+          JSON.stringify(error.response.data);
+      } else if (error.message) {
+        errorMessage = error.message;
+      }
 
       setChat((prev) => [
         ...prev,
         {
           sender: "bot",
-          text: "❌ Unable to connect to server.",
+          text: errorMessage,
         },
       ]);
     }
@@ -47,22 +61,25 @@ function Chatbot() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg">
+      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
 
         {/* Header */}
-        <div className="bg-green-700 text-white p-5 rounded-t-2xl">
+        <div className="bg-green-700 text-white p-5">
           <h1 className="text-3xl font-bold">
             🤖 AgriSmart AI Chatbot
           </h1>
-          <p>Ask any farming related question</p>
+          <p className="mt-1">
+            Ask any farming related question
+          </p>
         </div>
 
         {/* Chat Area */}
         <div className="h-[500px] overflow-y-auto p-5 space-y-4">
 
           {chat.length === 0 && (
-            <div className="text-gray-500 text-center mt-10">
-              🌾 Ask about crops, fertilizers, diseases, irrigation, etc.
+            <div className="text-center text-gray-500 mt-10">
+              🌾 Ask about crops, fertilizer, irrigation,
+              weather, diseases and farming.
             </div>
           )}
 
@@ -76,7 +93,7 @@ function Chatbot() {
               }`}
             >
               <div
-                className={`max-w-md p-3 rounded-xl ${
+                className={`max-w-[70%] whitespace-pre-wrap px-4 py-3 rounded-2xl ${
                   msg.sender === "user"
                     ? "bg-green-700 text-white"
                     : "bg-gray-200 text-black"
@@ -86,26 +103,27 @@ function Chatbot() {
               </div>
             </div>
           ))}
-
         </div>
 
         {/* Input */}
-        <div className="p-4 border-t flex gap-3">
+        <div className="border-t p-4 flex gap-3">
 
           <input
             type="text"
-            placeholder="Type your question..."
+            placeholder="Type your farming question..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="flex-1 border p-3 rounded-lg"
-            onKeyDown={(e) =>
-              e.key === "Enter" && sendMessage()
-            }
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                sendMessage();
+              }
+            }}
+            className="flex-1 border rounded-lg p-3 outline-none focus:ring-2 focus:ring-green-600"
           />
 
           <button
             onClick={sendMessage}
-            className="bg-green-700 text-white px-6 rounded-lg"
+            className="bg-green-700 hover:bg-green-800 text-white px-6 rounded-lg"
           >
             Send
           </button>

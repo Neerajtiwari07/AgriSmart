@@ -17,67 +17,65 @@ function Weather() {
   const [lon, setLon] = useState(null);
   const [farmLocation, setFarmLocation] = useState(null);
    
-  // -----------------------------
-  // Get Current Location Weather
-  // -----------------------------
-  const getCurrentLocation = () => {
+// -----------------------------
+// Get Current Location Weather
+// -----------------------------
+const getCurrentLocation = () => {
+  if (!navigator.geolocation) {
+    alert("Geolocation is not supported.");
+    return;
+  }
 
-    if (!navigator.geolocation) {
-      alert("Geolocation is not supported.");
-      return;
-    }
+  navigator.geolocation.getCurrentPosition(
+    async (position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
 
-    navigator.geolocation.getCurrentPosition(
+      setLat(latitude);
+      setLon(longitude);
 
-      async (position) => {
+      try {
+        setLoading(true);
+        setError("");
 
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-        setLat(lat);
-        setLon(lon);
+        const res = await api.get("/weather-location", {
+          params: {
+            lat: latitude,
+            lon: longitude,
+          },
+        });
 
-        try {
+        console.log("API Response:", res.data);
 
-          setLoading(true);
-          setError("");
+        setWeather(res.data.weather || null);
+        setForecast(res.data.forecast || []);
+        setAdvisory(res.data.advisory || "");
+        setCity(res.data.city || "Current Location");
+      } catch (err) {
+        console.error("Weather Error:", err);
 
-          const response = await api.get("/weather-location", {
-  params: {
-    lat,
-    lon,
-  },
-});
-
-          setWeather(response.data.weather);
-          setForecast(response.data.forecast);
-          setAdvisory(response.data.advisory);
-
-          // Optional: show current location
-          setCity(response.data.city);
-
-        } catch (err) {
-
-          console.log(err);
-          setError("Unable to fetch current location weather.");
-
-        } finally {
-
-          setLoading(false);
-
+        if (err.response) {
+          console.error("Server Response:", err.response.data);
         }
 
-      },
-
-      () => {
-
-        alert("Location permission denied.");
-
+        setError("Unable to fetch current location weather.");
+      } finally {
+        setLoading(false);
       }
+    },
 
-    );
+    (error) => {
+      console.error("Geolocation Error:", error);
+      alert("Location permission denied.");
+    },
 
-  };
- 
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 0,
+    }
+  );
+};
   // -----------------------------
   // Press Enter to Search
   // -----------------------------
@@ -303,7 +301,7 @@ Condition
 
       {/* 7 Days Forecast */}
 
-      {forecast.length > 0 && (
+      {Array.isArray(forecast) && forecast.length > 0 && (
 
       
 
