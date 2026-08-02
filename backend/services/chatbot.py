@@ -1,28 +1,23 @@
 from services.agent.router import route_question
-from services.rag.rag_chain import ask_rag
+from services.agent.executor import execute_tool
 
 
-def get_chat_response(data):
+def get_chat_response(data: dict):
 
-    question = data.get("message", "")
+    question = data.get("message", "").strip()
+    session_id = data.get("session_id", "default")
 
-    session = data.get("session_id", "default")
+    if not question:
+        return {
+            "success": False,
+            "reply": "Please enter a question."
+        }
 
     tool = route_question(question)
 
-    if tool["tool"] == "rag":
-
-        answer = ask_rag(
-            question,
-            session
-        )
-
-        return {
-            "success": True,
-            "reply": answer
-        }
+    answer = execute_tool(tool, question, session_id)
 
     return {
         "success": True,
-        "reply": f"Selected Tool : {tool['tool']}"
+        "reply": answer
     }

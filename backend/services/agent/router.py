@@ -1,55 +1,93 @@
-from services.rag.rag_chain import ask_rag
+import os
+from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-def route_question(question: str):
+def route_question(question):
 
-    text = question.lower()
+    response = client.chat.completions.create(
 
-    # Weather
-    if any(word in text for word in [
-        "weather",
-        "temperature",
-        "rain",
-        "humidity",
-        "wind",
-        "forecast"
-    ]):
+        model="llama-3.3-70b-versatile",
 
-        return {
-            "tool": "weather"
-        }
+        temperature=0,
 
-    # Crop Recommendation
-    if any(word in text for word in [
-        "crop",
-        "recommend",
-        "soil",
-        "nitrogen",
-        "phosphorus",
-        "potassium",
-        "fertilizer"
-    ]):
+        messages=[
+            {
+                "role": "system",
+                "content": """
+You are an intent classifier.
 
-        return {
-            "tool": "crop"
-        }
+Return ONLY one label.
 
-    # Disease
-    if any(word in text for word in [
-        "disease",
-        "leaf",
-        "spot",
-        "fungus",
-        "infection",
-        "yellow"
-    ]):
+Labels:
 
-        return {
-            "tool": "disease"
-        }
+WEATHER
+CROP_PREDICTION
+DISEASE
+GENERAL_AGRICULTURE
 
-    # Default
+Rules:
 
-    return {
-        "tool": "rag"
+WEATHER:
+Current weather, rain, humidity, temperature, wind, forecast.
+
+CROP_PREDICTION:
+ONLY when user wants crop prediction using soil values.
+
+Examples:
+
+N=90 P=40 K=40
+Recommend crop
+
+Predict crop
+
+Best crop for my soil
+
+DISEASE:
+Leaf disease
+Yellow spots
+Pest
+Fungus
+Plant infection
+
+GENERAL_AGRICULTURE:
+Everything else.
+
+Examples:
+
+How to grow wheat
+
+Best fertilizer for wheat
+
+Wheat cultivation
+
+PM Kisan
+
+Irrigation
+
+Organic farming
+
+Reply ONLY ONE LABEL.
+"""
+            },
+            {
+                "role": "user",
+                "content": question
+            }
+        ]
+    )
+
+    label = response.choices[0].message.content.strip()
+
+    mapping = {
+        "WEATHER": "weather",
+        "CROP_PREDICTION": "crop",
+        "DISEASE": "disease",
+        "GENERAL_AGRICULTURE": "rag",
     }
+
+    return mapping.get(label, "rag")
