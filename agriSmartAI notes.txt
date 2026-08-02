@@ -1,0 +1,149 @@
+backend/
+│
+├── main.py
+│
+├── services/
+│   ├── chatbot.py
+│   ├── weather.py
+│   ├── crop.py
+│   ├── disease.py
+│   │
+│   └── rag/
+│       ├── embeddings.py
+│       ├── vector_store.py
+│       ├── rag_chain.py
+│       ├── prompt.py
+│       └── loader.py
+│
+├── datasets/
+│     agri_faq.csv
+│
+├── vector_db/
+│     faiss_index
+│
+├── scripts/
+│     build_vector_db.py
+│
+└── .env
+
+Ye structure scalable hai. Baad me PDF, DOCX, websites sab add kar sakte ho.
+
+📌 Phase 2 - Required Libraries
+
+Terminal me install karo:
+
+pip install langchain
+pip install langchain-community
+pip install langchain-huggingface
+pip install langchain-groq
+pip install sentence-transformers
+pip install faiss-cpu
+pip install pandas
+pip install python-dotenv
+📌 Phase 3 - Pipeline Samjho
+
+Ab dhyan se.
+
+Farmer likhta hai
+
+गेहूं में कौन सी खाद डालें?
+Step 1
+
+Backend receive karega.
+
+↓
+
+"गेहूं में कौन सी खाद डालें?"
+Step 2
+
+Sentence Transformer
+
+↓
+
+Embedding
+
+[-0.22
+0.44
+0.88
+...
+]
+
+Ye numbers question ka meaning represent karte hain.
+
+Step 3
+
+FAISS
+
+Compare karega
+
+400 Questions
+
+ke vectors ke saath.
+
+Aur bolega
+
+Top 5 similar questions
+
+Jaise
+
+Best fertilizer for wheat
+
+↓
+
+0.94
+
+Which fertilizer is good for wheat
+
+↓
+
+0.91
+
+गेहूं की खाद
+
+↓
+
+0.90
+Step 4
+
+Ab LangChain in 5 documents ko ek context bana dega.
+
+Context
+
+1
+
+Best fertilizer...
+
+2
+
+Apply NPK...
+
+3
+
+Soil testing...
+
+...
+Step 5
+
+Groq ko ye prompt milega
+
+You are AgriSmart AI.
+
+Answer ONLY from the given context.
+
+Context:
+
+....
+
+Question:
+
+गेहूं में कौन सी खाद डालें?
+Step 6
+
+Groq natural language me answer dega.
+
+गेहूं के लिए मिट्टी परीक्षण के आधार पर
+संतुलित NPK उर्वरक का उपयोग करें।
+
+...
+
+Ye hai RAG.

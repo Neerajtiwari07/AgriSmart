@@ -1,29 +1,11 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+from services.chatbot import get_chat_response
 
 import pickle
 import pandas as pd
 import requests
 import os
-
-from groq import Groq
-from dotenv import load_dotenv
-
-# Load .env file
-load_dotenv()
-
-# Read Groq API Key
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
-if not GROQ_API_KEY:
-    raise ValueError("❌ GROQ_API_KEY not found in .env")
-
-# Initialize Groq Client
-client = Groq(
-    api_key=GROQ_API_KEY
-)
-
-print("✅ Groq API configured successfully")
 
 # FastAPI App
 app = FastAPI() 
@@ -49,6 +31,9 @@ with open("models/crop_model.pkl", "rb") as f:
 def home():
     return {"message": "AgriSmart AI Backend Running"}
 
+@app.post("/chat")
+def chat(data: dict):
+    return get_chat_response(data) 
 
 @app.post("/predict")
 def predict(data: dict):
@@ -123,84 +108,6 @@ def mandi(city: str):
     }
     
 
-@app.post("/chat")
-def chat(data: dict):
-
-    try:
-
-        user_message = data.get("message","").strip()
-
-        if user_message == "":
-            return {
-                "success":False,
-                "reply":"Please enter a question."
-            }
-
-        completion = client.chat.completions.create(
-
-            model="llama-3.3-70b-versatile",
-
-            temperature=0.5,
-
-            messages=[
-
-                {
-                    "role":"system",
-
-                    "content":"""
-
-You are AgriSmart AI.
-
-You are an expert Agriculture Assistant.
-
-Rules:
-
-1. Answer only farming related questions.
-
-2. If user asks unrelated questions politely refuse.
-
-3. Support Hindi and English.
-
-4. Keep answers short and practical.
-
-5. Give fertilizer suggestions if needed.
-
-6. Give disease treatment if needed.
-
-7. Give irrigation advice whenever useful.
-
-"""
-
-                },
-
-                {
-                    "role":"user",
-                    "content":user_message
-                }
-
-            ]
-
-        )
-
-        answer = completion.choices[0].message.content
-
-        return {
-
-            "success":True,
-
-            "reply":answer
-
-        }
-
-    except Exception as e:
-
-        return {
-
-            "success":False,
-
-            "reply":str(e)
-
-        }
     
 @app.get("/weather-location")
 def weather_location(lat: float, lon: float):

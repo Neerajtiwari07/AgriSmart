@@ -1,16 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import api from "../services/api";
 
 function Chatbot() {
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
+  const [sessionId, setSessionId] = useState("");
+
+  // Create Session ID (Only Once)
+  useEffect(() => {
+    let id = localStorage.getItem("session_id");
+
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem("session_id", id);
+    }
+
+    setSessionId(id);
+  }, []);
 
   const sendMessage = async () => {
     if (!message.trim()) return;
 
     const userMessage = message;
 
-    // User message
+    // Show user message immediately
     setChat((prev) => [
       ...prev,
       {
@@ -24,6 +37,7 @@ function Chatbot() {
     try {
       const response = await api.post("/chat", {
         message: userMessage,
+        session_id: sessionId,
       });
 
       setChat((prev) => [
@@ -68,6 +82,7 @@ function Chatbot() {
           <h1 className="text-3xl font-bold">
             🤖 AgriSmart AI Chatbot
           </h1>
+
           <p className="mt-1">
             Ask any farming related question
           </p>
@@ -105,7 +120,7 @@ function Chatbot() {
           ))}
         </div>
 
-        {/* Input */}
+        {/* Input Area */}
         <div className="border-t p-4 flex gap-3">
 
           <input
@@ -129,7 +144,6 @@ function Chatbot() {
           </button>
 
         </div>
-
       </div>
     </div>
   );
