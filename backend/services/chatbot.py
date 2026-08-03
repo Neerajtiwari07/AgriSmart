@@ -17,7 +17,14 @@ def get_chat_response(data: dict):
 
     answer = execute_tool(tool, question, session_id)
 
-    return {
+    if isinstance(answer, dict):   
+
+     return {
         "success": True,
-        "reply": answer
+        **answer
     }
+
+    return {
+    "success": True,
+    "reply": answer
+}

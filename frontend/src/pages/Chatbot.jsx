@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import api from "../services/api";
+import { useNavigate } from "react-router-dom";
 
 function Chatbot() {
+  const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
   const [sessionId, setSessionId] = useState("");
@@ -47,6 +49,17 @@ function Chatbot() {
           text: response.data.reply,
         },
       ]);
+    // Navigation Response
+    if (response.data.type === "navigation") {
+
+      setTimeout(() => {
+
+       navigate(response.data.page);
+
+    }, 1500);
+
+}
+
     } catch (error) {
       console.error("Axios Error:", error);
 

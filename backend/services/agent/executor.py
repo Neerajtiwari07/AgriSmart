@@ -44,13 +44,21 @@ def execute_tool(tool: str, question: str, session_id: str = "default"):
 
     # ---------------- Crop ----------------
     elif tool == "crop":
-        return "🌾 Crop Prediction Tool (next integration)"
+
+     return {
+        "type": "navigation",
+        "page": "/crop-recommendation",
+        "reply": "🌾 I can help you recommend the best crop.\n\nClick below to open the Crop Recommendation Tool."
+    }
 
     # ---------------- Disease ----------------
     elif tool == "disease":
-        return "🦠 Disease Detection Tool (next integration)"
 
-    return "Unknown Tool"
+      return {
+        "type": "navigation",
+        "page": "/disease-detection",
+        "reply": "🦠 I can help detect crop diseases.\n\nOpening Disease Detection Tool..."
+    }
 
 
 def extract_city(question):
