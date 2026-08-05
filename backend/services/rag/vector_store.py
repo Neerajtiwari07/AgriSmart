@@ -12,10 +12,14 @@ db = FAISS.load_local(
 )
 
 retriever = db.as_retriever(
-    search_type="similarity",
-    search_kwargs={"k": 5}
+    search_type="mmr",
+    search_kwargs={
+        "k": 3,
+        "fetch_k": 10
+    }
 )
 
 
-def retrieve(question):
+
+def retrieve(question: str):
     return retriever.invoke(question)

@@ -58,10 +58,18 @@ conversation = RunnableWithMessageHistory(
 def ask_rag(question: str, session_id: str = "default"):
 
     docs = retrieve(question)
+    
+    print("=" * 80)
+    print("Question:", question)
+    print("Retrieved Docs:", len(docs))
+    print("=" * 80)
+
+    if not docs:
+       return "I don't have enough information in my knowledge base."
 
     context = "\n\n".join(
-        [doc.page_content for doc in docs]
-    )
+        [  doc.page_content for doc in docs[:3]]
+)  
 
     answer = conversation.invoke(
         {
