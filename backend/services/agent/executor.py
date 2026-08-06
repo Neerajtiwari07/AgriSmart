@@ -59,6 +59,16 @@ def execute_tool(tool: str, question: str, session_id: str = "default"):
         "page": "/disease-detection",
         "reply": "🦠 I can help detect crop diseases.\n\nOpening Disease Detection Tool..."
     }
+      
+    # ---------------- Mandi ----------------
+    
+    elif tool == "mandi":
+
+       return {
+        "type": "navigation",
+        "page": "/mandi-rates",
+        "reply": "📈 I can help you check the latest mandi rates.\n\nOpening Mandi Rates Tool..."
+    }
 
 
 def extract_city(question):
