@@ -28,6 +28,7 @@ Labels:
 WEATHER
 CROP_PREDICTION
 DISEASE
+MANDI
 GENERAL_AGRICULTURE
 
 Rules:
@@ -35,41 +36,52 @@ Rules:
 WEATHER:
 Current weather, rain, humidity, temperature, wind, forecast.
 
+Examples:
+Weather in Lucknow
+Temperature today
+Rain forecast
+Humidity
+
 CROP_PREDICTION:
 ONLY when user wants crop prediction using soil values.
 
 Examples:
-
-N=90 P=40 K=40
 Recommend crop
-
 Predict crop
-
 Best crop for my soil
+N=90 P=40 K=40
 
 DISEASE:
+Plant disease
 Leaf disease
 Yellow spots
 Pest
 Fungus
-Plant infection
+Tomato disease
+
+MANDI:
+Questions related to crop prices, mandi rates, market prices, MSP.
+
+Examples:
+Mandi rates
+Wheat mandi price
+Rice price today
+Tomato market price
+Today's mandi rate
+आज का मंडी भाव
+गेहूं का भाव
+धान का रेट
 
 GENERAL_AGRICULTURE:
 Everything else.
 
 Examples:
-
 How to grow wheat
-
 Best fertilizer for wheat
-
-Wheat cultivation
-
-PM Kisan
-
-Irrigation
-
 Organic farming
+PM Kisan
+Irrigation
+Crop rotation
 
 Reply ONLY ONE LABEL.
 """
@@ -81,12 +93,13 @@ Reply ONLY ONE LABEL.
         ]
     )
 
-    label = response.choices[0].message.content.strip()
+    label = response.choices[0].message.content.strip().upper()
 
     mapping = {
         "WEATHER": "weather",
         "CROP_PREDICTION": "crop",
         "DISEASE": "disease",
+        "MANDI": "mandi",
         "GENERAL_AGRICULTURE": "rag",
     }
 

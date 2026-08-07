@@ -8,8 +8,9 @@ function Chatbot() {
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
   const [sessionId, setSessionId] = useState("");
+  const [location, setLocation] = useState(null);
 
-  // Create Session ID
+  // Session ID
   useEffect(() => {
     let id = localStorage.getItem("session_id");
 
@@ -19,6 +20,25 @@ function Chatbot() {
     }
 
     setSessionId(id);
+  }, []);
+
+  // Get Current Location
+  useEffect(() => {
+    if (!navigator.geolocation) return;
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setLocation({
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        });
+
+        console.log("Location:", position.coords.latitude, position.coords.longitude);
+      },
+      (err) => {
+        console.log("Location Permission Denied", err);
+      }
+    );
   }, []);
 
   const sendMessage = async () => {
@@ -31,6 +51,7 @@ function Chatbot() {
 
     const userMessage = message;
 
+    // Show user message
     setChat((prev) => [
       ...prev,
       {
@@ -42,10 +63,28 @@ function Chatbot() {
     setMessage("");
 
     try {
-      const response = await api.post("/chat", {
+      const payload = {
         message: userMessage,
         session_id: sessionId,
-      });
+      };
+
+      // If user asks weather and GPS available
+      const q = userMessage.toLowerCase();
+
+      if (
+        location &&
+        (
+          q === "weather" ||
+          q === "today weather" ||
+          q === "current weather" ||
+          q === "wether"
+        )
+      ) {
+        payload.lat = location.lat;
+        payload.lon = location.lon;
+      }
+
+      const response = await api.post("/chat", payload);
 
       console.log("Backend Response:", response.data);
 
@@ -64,7 +103,7 @@ function Chatbot() {
         response.data.type === "navigation" &&
         response.data.page
       ) {
-        console.log("Navigating to:", response.data.page);
+        console.log("Navigate:", response.data.page);
 
         setTimeout(() => {
           navigate(response.data.page);
@@ -79,6 +118,8 @@ function Chatbot() {
         errorMessage =
           error.response.data.reply ||
           JSON.stringify(error.response.data);
+      } else if (error.message) {
+        errorMessage = error.message;
       }
 
       setChat((prev) => [
@@ -93,6 +134,7 @@ function Chatbot() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
+
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
 
         {/* Header */}
@@ -138,6 +180,7 @@ function Chatbot() {
               </div>
             </div>
           ))}
+
         </div>
 
         {/* Input */}
@@ -167,6 +210,7 @@ function Chatbot() {
         </div>
 
       </div>
+
     </div>
   );
 }
