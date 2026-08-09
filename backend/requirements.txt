@@ -9,3 +9,4 @@ joblib
 google-generativeai
 python-dotenv
 groq
+langchain-groq
