@@ -8,3 +8,4 @@ requests
 joblib
 google-generativeai
 python-dotenv
+groq
