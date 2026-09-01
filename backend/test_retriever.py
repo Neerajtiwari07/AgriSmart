@@ -1,9 +1,9 @@
 from services.rag.vector_store import retrieve
 
-docs = retrieve("Best fertilizer for wheat")
+docs = retrieve("tamatar")
 
-print("=" * 80)
+print("\nRESULT:", len(docs))
 
-for doc in docs:
+for i, doc in enumerate(docs):
+    print("\nDOCUMENT", i + 1)
     print(doc.page_content)
-    print("-" * 80)

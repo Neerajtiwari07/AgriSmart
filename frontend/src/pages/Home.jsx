@@ -16,7 +16,7 @@ function Home() {
 
         <p className="mt-6 text-xl text-center max-w-3xl">
           Empowering Indian Farmers with AI-powered Crop Recommendation,
-          Disease Detection, Weather Forecasting and Mandi Intelligence.
+          Disease Detection, Weather Forecasting and Market Intelligence.
         </p>
 
         <button

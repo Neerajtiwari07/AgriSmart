@@ -1,24 +1,104 @@
 import os
+
 from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
 
 
-def route_question(question):
+def route_question(question: str):
 
-    response = client.chat.completions.create(
+    question = question.strip()
 
-        model="llama-3.3-70b-versatile",
+    if not question:
+        return "rag"
 
-        temperature=0,
+    # --------------------------------------------------------
+    # Direct Weather Detection
+    # --------------------------------------------------------
 
-        messages=[
-            {
-                "role": "system",
-                "content": """
+    weather_keywords = [
+        "weather",
+        "temperature",
+        "humidity",
+        "wind",
+        "rain",
+        "rainfall",
+        "forecast",
+
+        # Hindi
+        "बारिश",
+        "वर्षा",
+        "मौसम",
+        "तापमान",
+        "नमी",
+        "हवा",
+
+        # Hinglish
+        "barish",
+        "baarish",
+        "mausam",
+        "taapman",
+        "nami",
+        "hawa",
+    ]
+
+    q_lower = question.lower()
+
+    if any(word in q_lower for word in weather_keywords):
+        return "weather"
+
+    # --------------------------------------------------------
+    # Follow-up Questions
+    # --------------------------------------------------------
+
+    follow_up_words = [
+        "isko",
+        "ise",
+        "iska",
+        "iski",
+        "iske",
+        "isme",
+        "isey",
+        "kab",
+        "kaise",
+        "kyu",
+        "kyun",
+        "kitna",
+        "kitni",
+        "kitne",
+        "what about this",
+        "how about this",
+        "when should i",
+        "how should i",
+        "and this",
+        "this",
+        "it",
+    ]
+
+    if any(word in q_lower for word in follow_up_words):
+        return "rag"
+
+    # --------------------------------------------------------
+    # Intent Classification
+    # --------------------------------------------------------
+
+    try:
+
+        response = client.chat.completions.create(
+
+            model="openai/gpt-oss-20b",
+
+            temperature=0,
+
+            messages=[
+                {
+                    "role": "system",
+                    "content": """
 You are an intent classifier.
 
 Return ONLY one label.
@@ -85,15 +165,25 @@ Crop rotation
 
 Reply ONLY ONE LABEL.
 """
-            },
-            {
-                "role": "user",
-                "content": question
-            }
-        ]
-    )
+                },
+                {
+                    "role": "user",
+                    "content": question
+                }
+            ]
+        )
 
-    label = response.choices[0].message.content.strip().upper()
+        label = response.choices[0].message.content.strip().upper()
+
+    except Exception as e:
+
+        print("ROUTER ERROR:", e)
+
+        return "rag"
+
+    # --------------------------------------------------------
+    # Label Mapping
+    # --------------------------------------------------------
 
     mapping = {
         "WEATHER": "weather",
