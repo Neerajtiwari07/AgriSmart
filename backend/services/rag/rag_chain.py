@@ -8,7 +8,28 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 from services.rag.vector_store import retrieve
+from services.rag.context_validator import validate_context
 from services.memory.history import get_session_history
+
+
+# ============================================================
+# PHASE 5 - RAG 2.0
+# RAG PIPELINE INTEGRATION
+#
+# User Query
+#      ↓
+# Query Rewriting
+#      ↓
+# Retrieval
+#      ↓
+# Context Validation
+#      ↓
+# Clean Context
+#      ↓
+# Groq
+#      ↓
+# Final Answer
+# ============================================================
 
 
 # ============================================================
@@ -20,10 +41,15 @@ load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 if not GROQ_API_KEY:
-    raise RuntimeError("GROQ_API_KEY is missing")
+    raise RuntimeError(
+        "GROQ_API_KEY is missing"
+    )
 
 
-FALLBACK = "I don't have enough information in my knowledge base."
+FALLBACK = (
+    "I don't have enough information "
+    "in my knowledge base."
+)
 
 
 # ============================================================
@@ -42,65 +68,55 @@ llm = ChatGroq(
 # ANSWER PROMPT
 # ============================================================
 
+# ============================================================
+# ANSWER GENERATION PROMPT
+# ============================================================
+
 answer_prompt = ChatPromptTemplate.from_messages([
     (
         "system",
         """
 You are AgriSmart AI, an agriculture assistant.
 
-Answer the user's question using ONLY the Provided Information.
+Answer the user's question using ONLY the agriculture context provided below.
 
-STRICT RULES:
+Rules:
+1. Use the provided context as the primary knowledge source.
+2. Do not invent facts that are not supported by the context.
+3. If the exact answer is not available, clearly say that the available context does not contain the exact information.
+4. You may combine information from multiple context documents when they are relevant.
+5. Answer in the same language as the user's question.
+6. Keep the answer concise and practical.
+7. Do not mention FAISS, RAG, vector database, retrieval, prompts, or internal system details.
 
-1. Never use outside knowledge.
-2. Never invent facts.
-3. Never guess.
-4. Use only information present in Provided Information.
-5. If several documents contain relevant information, combine them.
-6. If the user asks only for a crop/topic name, summarize the relevant
-   information available about that topic.
-7. Answer in the same language as the user's question.
-8. For Hindi or Hinglish questions, use simple Hindi/Hinglish.
-9. For English questions, answer in English.
-10. Keep the answer short and practical.
-11. Do not show reasoning.
-12. Do not show analysis.
-13. Never output <think> or </think>.
-14. Never mention thinking process.
-15. Never write "Output:".
-16. Never write "Final Answer:".
-17. Never repeat the answer.
-18. Return ONLY the final answer.
-
-IMPORTANT:
-
-If the Provided Information contains relevant information,
-answer using that information.
-
-Only use this exact fallback when there is NO relevant information:
-
-I don't have enough information in my knowledge base.
-
-Provided Information:
+AGRICULTURE CONTEXT:
 {context}
 """
     ),
     (
         "human",
-        "{question}"
+        """
+User Question:
+{question}
+
+Provide the best answer supported by the agriculture context.
+"""
     ),
 ])
-
 
 # ============================================================
 # ANSWER CHAIN
 # ============================================================
 
-answer_chain = answer_prompt | llm | StrOutputParser()
+answer_chain = (
+    answer_prompt
+    | llm
+    | StrOutputParser()
+)
 
 
 # ============================================================
-# SEARCH QUERY REWRITER
+# SEARCH QUERY REWRITER PROMPT
 # ============================================================
 
 search_prompt = ChatPromptTemplate.from_messages([
@@ -130,7 +146,11 @@ Rules:
 9. Keep the result short.
 10. Return ONLY the search query.
 11. Never return an answer.
-
+"""
+    ),
+    (
+        "human",
+        """
 Previous conversation:
 {history}
 
@@ -141,7 +161,15 @@ Current question:
 ])
 
 
-search_chain = search_prompt | llm | StrOutputParser()
+# ============================================================
+# SEARCH CHAIN
+# ============================================================
+
+search_chain = (
+    search_prompt
+    | llm
+    | StrOutputParser()
+)
 
 
 # ============================================================
@@ -149,6 +177,7 @@ search_chain = search_prompt | llm | StrOutputParser()
 # ============================================================
 
 GREETINGS = {
+
     "hello":
         "Hello! I am AgriSmart AI. I can help you with farming-related questions.",
 
@@ -175,7 +204,10 @@ def clean_response(answer: str) -> str:
     if not answer:
         return ""
 
-    answer = str(answer).strip()
+    answer = str(
+        answer
+    ).strip()
+
 
     # --------------------------------------------------------
     # Remove <think>...</think>
@@ -188,6 +220,7 @@ def clean_response(answer: str) -> str:
         flags=re.DOTALL | re.IGNORECASE,
     )
 
+
     # --------------------------------------------------------
     # Remove remaining think tags
     # --------------------------------------------------------
@@ -198,6 +231,7 @@ def clean_response(answer: str) -> str:
         answer,
         flags=re.IGNORECASE,
     )
+
 
     # --------------------------------------------------------
     # Remove common prefixes
@@ -210,31 +244,53 @@ def clean_response(answer: str) -> str:
         flags=re.IGNORECASE,
     )
 
+
     # --------------------------------------------------------
     # Reject visible reasoning
     # --------------------------------------------------------
 
     bad_phrases = [
+
         "thinking process",
+
         "analyze user input",
+
         "check provided information",
+
         "scan provided information",
+
         "apply rules",
+
         "match & extract",
+
         "draft response",
+
         "verify against constraints",
+
         "self-correction",
+
         "tags in output",
+
         "output matches requirement",
+
         "final check",
+
         "[output generation]",
+
         "[final response generation]",
     ]
 
+
     lower = answer.lower()
 
-    if any(phrase in lower for phrase in bad_phrases):
+
+    if any(
+        phrase in lower
+        for phrase in bad_phrases
+    ):
+
         return ""
+
 
     # --------------------------------------------------------
     # Remove duplicate consecutive lines
@@ -242,17 +298,30 @@ def clean_response(answer: str) -> str:
 
     cleaned_lines = []
 
+
     for line in answer.splitlines():
 
         line = line.strip()
 
+
         if not line:
             continue
 
-        if not cleaned_lines or line != cleaned_lines[-1]:
-            cleaned_lines.append(line)
 
-    answer = "\n".join(cleaned_lines).strip()
+        if (
+            not cleaned_lines
+            or line != cleaned_lines[-1]
+        ):
+
+            cleaned_lines.append(
+                line
+            )
+
+
+    answer = "\n".join(
+        cleaned_lines
+    ).strip()
+
 
     # --------------------------------------------------------
     # Remove complete duplicated answer
@@ -262,11 +331,19 @@ def clean_response(answer: str) -> str:
 
         half = len(answer) // 2
 
-        first = answer[:half].strip()
-        second = answer[half:].strip()
+        first = answer[
+            :half
+        ].strip()
+
+        second = answer[
+            half:
+        ].strip()
+
 
         if first == second:
+
             answer = first
+
 
     return answer.strip()
 
@@ -275,18 +352,29 @@ def clean_response(answer: str) -> str:
 # GET CONVERSATION HISTORY
 # ============================================================
 
-def get_history_text(session_id: str) -> str:
+def get_history_text(
+    session_id: str
+) -> str:
 
     try:
 
-        history = get_session_history(session_id)
+        history = get_session_history(
+            session_id
+        )
+
 
         if not history.messages:
+
             return ""
+
 
         messages = []
 
+
+        # ----------------------------------------------------
         # Only use recent messages
+        # ----------------------------------------------------
+
         for message in history.messages[-6:]:
 
             message_type = getattr(
@@ -294,6 +382,7 @@ def get_history_text(session_id: str) -> str:
                 "type",
                 ""
             )
+
 
             content = str(
                 getattr(
@@ -303,24 +392,36 @@ def get_history_text(session_id: str) -> str:
                 )
             ).strip()
 
+
             if not content:
                 continue
 
+
             if message_type == "human":
+
                 messages.append(
                     f"User: {content}"
                 )
 
+
             elif message_type == "ai":
+
                 messages.append(
                     f"Assistant: {content}"
                 )
 
-        return "\n".join(messages)
+
+        return "\n".join(
+            messages
+        )
+
 
     except Exception as e:
 
-        print("MEMORY ERROR:", e)
+        print(
+            "MEMORY ERROR:",
+            e
+        )
 
         return ""
 
@@ -334,35 +435,59 @@ def build_search_query(
     session_id: str,
 ) -> str:
 
-    history_text = get_history_text(session_id)
+    history_text = get_history_text(
+        session_id
+    )
 
+
+    # --------------------------------------------------------
     # No history
+    # --------------------------------------------------------
+
     if not history_text:
 
-        history_for_prompt = "No previous conversation."
+        history_for_prompt = (
+            "No previous conversation."
+        )
 
     else:
 
-        history_for_prompt = history_text
+        history_for_prompt = (
+            history_text
+        )
+
+
+    # --------------------------------------------------------
+    # Query rewrite
+    # --------------------------------------------------------
 
     try:
 
         rewritten = search_chain.invoke(
             {
-                "history": history_for_prompt,
-                "question": question,
+                "history":
+                    history_for_prompt,
+
+                "question":
+                    question,
             }
         )
+
 
         rewritten = str(
             rewritten
         ).strip()
 
+
     except Exception as e:
 
-        print("QUERY REWRITE ERROR:", e)
+        print(
+            "QUERY REWRITE ERROR:",
+            e
+        )
 
         rewritten = question
+
 
     # --------------------------------------------------------
     # Safety
@@ -372,95 +497,105 @@ def build_search_query(
 
         rewritten = question
 
-    # Never completely lose original query
-    if question.lower() not in rewritten.lower():
 
-        rewritten = f"{question} {rewritten}"
+    # --------------------------------------------------------
+    # Never completely lose original query
+    # --------------------------------------------------------
+
+    if (
+        question.lower()
+        not in rewritten.lower()
+    ):
+
+        rewritten = (
+            f"{question} {rewritten}"
+        )
+
 
     return rewritten.strip()
 
 
 # ============================================================
-# ASK RAG
+# BUILD VALIDATED CONTEXT
 # ============================================================
 
-def ask_rag(
+def build_validated_context(
     question: str,
-    session_id: str = "default",
+    docs
 ):
 
-    # --------------------------------------------------------
-    # Validate
-    # --------------------------------------------------------
+    if not question:
+        return ""
 
-    if not question or not question.strip():
 
-        return "Please ask a question."
-
-    question = question.strip()
-
-    normalized = question.lower()
+    if not docs:
+        return ""
 
 
     # --------------------------------------------------------
-    # Greeting
-    # --------------------------------------------------------
-
-    if normalized in GREETINGS:
-
-        return GREETINGS[normalized]
-
-
-    # --------------------------------------------------------
-    # Build better search query
-    # --------------------------------------------------------
-
-    search_query = build_search_query(
-        question,
-        session_id,
-    )
-
-
-    print("=" * 70)
-    print("USER QUESTION :", question)
-    print("SEARCH QUERY  :", search_query)
-    print("=" * 70)
-
-
-    # --------------------------------------------------------
-    # Retrieve
+    # Context Validation
     # --------------------------------------------------------
 
     try:
 
-        docs = retrieve(search_query)
+        validated_context = (
+            validate_context(
+                question,
+                docs
+            )
+        )
 
     except Exception as e:
 
-        print("RETRIEVAL ERROR:", e)
+        print(
+            "CONTEXT VALIDATION ERROR:",
+            e
+        )
 
-        return FALLBACK
+        return ""
 
 
-    print("DOCUMENTS FOUND:", len(docs))
+    print("=" * 70)
+    print(
+        "VALIDATED CONTEXT:",
+        len(validated_context)
+    )
+    print("=" * 70)
 
 
     # --------------------------------------------------------
-    # No documents
+    # No valid context
     # --------------------------------------------------------
 
-    if not docs:
+    if not validated_context:
 
-        return FALLBACK
+        print(
+            "NO RELEVANT CONTEXT FOUND"
+        )
+
+        return ""
 
 
     # --------------------------------------------------------
-    # Build context
+    # Build context only from validated docs
     # --------------------------------------------------------
 
     context_parts = []
 
-    for doc in docs[:5]:
+
+    for index, item in enumerate(
+        validated_context[:5],
+        start=1
+    ):
+
+        doc = item.get(
+            "document"
+        )
+
+
+        if not doc:
+            continue
+
 
         if not hasattr(
             doc,
@@ -468,46 +603,201 @@ def ask_rag(
         ):
             continue
 
+
         content = str(
             doc.page_content
         ).strip()
 
-        if content:
 
-            context_parts.append(
-                content
+        if not content:
+            continue
+
+
+        context_parts.append(
+            content
+        )
+
+
+        print(
+            f"Context Document {index}:",
+            doc.metadata.get(
+                "question",
+                ""
             )
+        )
 
 
-    context = "\n\n".join(
+        print(
+            "Validation Score:",
+            round(
+                item.get(
+                    "relevance_score",
+                    0.0
+                ),
+                4
+            )
+        )
+
+
+        print(
+            "Reason:",
+            item.get(
+                "reason",
+                ""
+            )
+        )
+
+
+    return "\n\n".join(
         context_parts
     )
 
 
-    # --------------------------------------------------------
-    # Empty context
-    # --------------------------------------------------------
+# ============================================================
+# ASK RAG
+# ============================================================
+
+
+def ask_rag(
+    question: str,
+    session_id: str = "default",
+):
+
+
+    # ========================================================
+    # VALIDATE QUESTION
+    # ========================================================
+
+    if (
+        not question
+        or not question.strip()
+    ):
+
+        return "Please ask a question."
+
+
+    question = question.strip()
+
+    normalized = question.lower()
+
+
+    # ========================================================
+    # GREETING
+    # ========================================================
+
+    if normalized in GREETINGS:
+
+        return GREETINGS[
+            normalized
+        ]
+
+
+    # ========================================================
+    # BUILD BETTER SEARCH QUERY
+    # ========================================================
+
+    search_query = build_search_query(
+        question,
+        session_id
+    )
+
+
+    print("=" * 70)
+    print(
+        "USER QUESTION :",
+        question
+    )
+
+    print(
+        "SEARCH QUERY  :",
+        search_query
+    )
+
+    print("=" * 70)
+
+
+    # ========================================================
+    # RETRIEVE
+    # ========================================================
+
+    try:
+
+        docs = retrieve(
+            search_query
+        )
+
+
+    except Exception as e:
+
+        print(
+            "RETRIEVAL ERROR:",
+            e
+        )
+
+        return FALLBACK
+
+
+    print(
+        "DOCUMENTS RETRIEVED:",
+        len(docs)
+    )
+
+
+    # ========================================================
+    # NO RETRIEVED DOCUMENTS
+    # ========================================================
+
+    if not docs:
+
+        return FALLBACK
+
+
+    # ========================================================
+    # CONTEXT VALIDATION
+    # ========================================================
+
+    context = build_validated_context(
+        question,
+        docs
+    )
+
+
+    # ========================================================
+    # NO VALID CONTEXT
+    # ========================================================
 
     if not context:
 
         return FALLBACK
 
 
-    # --------------------------------------------------------
-    # Debug context
-    # --------------------------------------------------------
+    # ========================================================
+    # DEBUG CONTEXT
+    # ========================================================
 
     print("=" * 70)
-    print("CONTEXT:")
-    print(context[:4000])
+    print(
+        "FINAL VALIDATED CONTEXT:"
+    )
+    print(
+        context[:4000]
+    )
     print("=" * 70)
 
 
-    # --------------------------------------------------------
-    # Generate answer
-    # --------------------------------------------------------
+       # ========================================================
+    # GENERATE ANSWER
+    # ========================================================
 
     try:
+
+        print("=" * 70)
+        print("ANSWER GENERATION INPUT")
+        print("QUESTION:", question)
+        print("-" * 70)
+        print("CONTEXT:")
+        print(context)
+        print("=" * 70)
 
         answer = answer_chain.invoke(
             {
@@ -516,33 +806,44 @@ def ask_rag(
             }
         )
 
+        # ----------------------------------------------------
+        # DEBUG RAW LLM RESPONSE
+        # ----------------------------------------------------
+
+        print("=" * 70)
+        print("RAW LLM ANSWER:")
+        print(repr(answer))
+        print("=" * 70)
+
     except Exception as e:
 
-        print("LLM ERROR:", e)
+        print(
+            "LLM ERROR:",
+            e
+        )
 
         return FALLBACK
 
-
-    # --------------------------------------------------------
-    # Clean
-    # --------------------------------------------------------
+    # ========================================================
+    # CLEAN RESPONSE
+    # ========================================================
 
     answer = clean_response(
         answer
     )
 
 
-    # --------------------------------------------------------
-    # Empty / invalid answer
-    # --------------------------------------------------------
+    # ========================================================
+    # EMPTY / INVALID ANSWER
+    # ========================================================
 
     if not answer:
 
         return FALLBACK
 
 
-    # --------------------------------------------------------
-    # Final answer
-    # --------------------------------------------------------
+    # ========================================================
+    # FINAL ANSWER
+    # ========================================================
 
     return answer

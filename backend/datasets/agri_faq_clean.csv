@@ -1,0 +1,394 @@
+﻿Question,Keywords,Answer,Category,Language,Topic
+hello,,Namaste! Main AgriSmart AI hoon. Main kheti se jude sawalon me aapki madad kar sakta hoon.,General,,general
+what is wheat,,Wheat is a major Rabi crop grown during winter.,General,,general
+गेहूं क्या है,,गेहूं एक प्रमुख रबी फसल है।,General,,general
+How to grow wheat?,,"Use certified seeds, prepare the field well, sow at the recommended time, and irrigate regularly.",Wheat,English,
+Best fertilizer for wheat?,,Apply fertilizer based on soil testing. A balanced NPK application is recommended.,Wheat,English,
+गेहूं की बुवाई कब करें?,,उत्तर भारत में सामान्यतः नवंबर में बुवाई की जाती है।,Wheat,Hindi,
+How often should rice be irrigated?,,Maintain appropriate water levels depending on the crop stage.,Rice,English,
+धान में पीले पत्ते क्यों होते हैं?,,"यह पोषक तत्वों की कमी, रोग या जल प्रबंधन की समस्या के कारण हो सकता है।",Rice,Hindi,
+What is drip irrigation?,,"Drip irrigation supplies water directly to plant roots, reducing water wastage.",Irrigation,English,
+How to improve soil fertility?,,"Use organic manure, compost, crop rotation, and soil-test-based fertilizers.",Soil,English,
+टमाटर में झुलसा रोग का उपचार?,,रोगग्रस्त पत्तियाँ हटाएँ और कृषि विशेषज्ञ की सलाह अनुसार फफूंदनाशक का उपयोग करें।,Tomato Disease,Hindi,
+How to control aphids?,,Use neem-based products or recommended insecticides as per local agricultural guidelines.,Pest,English,
+What is PM-KISAN?,,PM-KISAN is a Government of India income support scheme for eligible farmers.,Government Scheme,English,
+Best season for mustard?,,Mustard is generally sown during the Rabi season.,Mustard,English,
+प्याज की सिंचाई कितनी बार करें?,,मिट्टी और मौसम के अनुसार नियमित अंतराल पर सिंचाई करें।,Onion,Hindi,
+How to increase crop yield?,,"Use quality seeds, balanced nutrition, timely irrigation, and pest management.",General,English,
+How to identify nitrogen deficiency?,,Yellowing of older leaves is a common symptom of nitrogen deficiency.,Nutrients,English,
+Organic farming benefits?,,"Improves soil health, biodiversity, and reduces chemical use.",Organic Farming,English,
+What is wheat?,"wheat,rabi,crop",Wheat is a major Rabi crop grown during the winter season.,Wheat,English,"crop,basic"
+When should wheat be sown?,"wheat,sowing,time",In North India wheat is usually sown from October to November.,Wheat,English,sowing
+Best fertilizer for wheat?,"wheat,npk,fertilizer",Apply fertilizer based on soil testing. Balanced NPK application is generally recommended.,Wheat,English,fertilizer
+How much water does wheat need?,"wheat,irrigation",Wheat generally requires 4–6 irrigations depending on soil and climate.,Wheat,English,irrigation
+What is the ideal temperature for wheat?,"wheat,temperature",The ideal temperature for wheat growth is about 15–25°C.,Wheat,English,weather
+How to increase wheat yield?,"wheat,yield","Use certified seeds, balanced fertilizers, timely irrigation, and pest management.",Wheat,English,yield
+Common diseases in wheat?,"wheat,disease","Rust, smut, and powdery mildew are common wheat diseases.",Wheat,English,disease
+How to control wheat rust?,"wheat,rust",Use resistant varieties and recommended fungicides after consulting local agricultural experts.,Wheat,English,disease
+What is rice?,"rice,kharif,crop",Rice is a major Kharif crop requiring warm and humid conditions.,Rice,English,"crop,basic"
+Best season for rice?,"rice,season",Rice is mainly grown during the Kharif season in India.,Rice,English,season
+How often should rice be irrigated?,"rice,irrigation",Maintain suitable water levels according to the crop growth stage.,Rice,English,irrigation
+Best fertilizer for rice?,"rice,fertilizer",Use fertilizers based on soil testing. Balanced nutrient management is recommended.,Rice,English,fertilizer
+Why do rice leaves turn yellow?,"rice,yellow leaves","Yellow leaves may indicate nutrient deficiency, disease, or water management issues.",Rice,English,problem
+How to improve soil fertility?,"soil,fertility","Use compost, organic manure, crop rotation, and soil-test-based fertilization.",Soil,English,soil
+What is drip irrigation?,"drip,irrigation","Drip irrigation delivers water directly to plant roots, reducing water wastage.",Irrigation,English,water
+Benefits of drip irrigation?,"drip,benefits","It saves water, reduces weed growth, and improves fertilizer efficiency.",Irrigation,English,water
+What is sprinkler irrigation?,"sprinkler,irrigation",Sprinkler irrigation distributes water like rainfall over the crop field.,Irrigation,English,water
+What is organic farming?,"organic,farming",Organic farming avoids synthetic chemicals and emphasizes natural inputs.,Organic Farming,English,organic
+Benefits of organic farming?,"organic,benefits","It improves soil health, biodiversity, and reduces chemical use.",Organic Farming,English,organic
+What is compost?,compost,Compost is decomposed organic matter used to improve soil fertility.,Soil,English,organic
+What is vermicompost?,vermicompost,Vermicompost is nutrient-rich compost produced using earthworms.,Soil,English,organic
+How to control aphids?,"aphids,pest",Use neem-based products or approved insecticides as recommended by agricultural experts.,Pest,English,pest
+What are aphids?,aphids,Aphids are small sap-sucking insects that damage crops.,Pest,English,pest
+How to identify nitrogen deficiency?,"nitrogen,deficiency",Yellowing of older leaves is a common symptom of nitrogen deficiency.,Nutrients,English,nutrients
+What is urea?,"urea,fertilizer",Urea is a nitrogen-rich fertilizer commonly used in agriculture.,Fertilizer,English,fertilizer
+What is DAP?,"dap,fertilizer",DAP (Diammonium Phosphate) supplies phosphorus and nitrogen to crops.,Fertilizer,English,fertilizer
+What is NPK fertilizer?,"npk,fertilizer","NPK fertilizer provides nitrogen, phosphorus, and potassium.",Fertilizer,English,fertilizer
+What is soil testing?,"soil,test",Soil testing determines nutrient status and soil pH to guide fertilizer use.,Soil,English,soil
+Why is soil testing important?,"soil,test",It helps apply the correct fertilizer in the right quantity.,Soil,English,soil
+What is crop rotation?,"crop,rotation",Crop rotation means growing different crops in sequence to improve soil health.,Soil,English,soil
+Benefits of crop rotation?,"crop,rotation","It reduces pests, improves fertility, and increases productivity.",Soil,English,soil
+What is mulching?,mulching,Mulching covers soil to conserve moisture and suppress weeds.,General,English,water
+Benefits of mulching?,mulching,Mulching conserves moisture and improves soil temperature.,General,English,soil
+What is PM-KISAN?,pm-kisan,PM-KISAN is an income support scheme for eligible farmers in India.,Government Scheme,English,scheme
+What is KCC?,kisan credit card,Kisan Credit Card provides farmers with easy access to agricultural credit.,Government Scheme,English,scheme
+What is mustard?,mustard,Mustard is an important Rabi oilseed crop.,Mustard,English,crop
+Best season for mustard?,"mustard,season",Mustard is generally sown during the Rabi season.,Mustard,English,season
+How to grow tomato?,tomato,"Grow tomato using healthy seedlings, fertile soil, and regular irrigation.",Tomato,English,vegetable
+Common tomato disease?,"tomato,disease",Early blight and late blight are common tomato diseases.,Tomato Disease,English,disease
+How to prevent tomato blight?,"tomato,blight","Use disease-free seedlings, crop rotation, and approved fungicides when needed.",Tomato Disease,English,disease
+What is maize?,maize,Maize is an important cereal crop grown in Kharif and some Rabi regions.,Maize,English,crop
+Best fertilizer for maize?,"maize,fertilizer",Apply fertilizers according to soil test recommendations.,Maize,English,fertilizer
+How to control weeds?,weed,"Use timely weeding, mulching, or approved herbicides where appropriate.",General,English,weed
+What is integrated pest management?,ipm,"Integrated Pest Management combines biological, cultural, and chemical methods to manage pests.",Pest,English,IPM
+Why use certified seeds?,"certified,seeds","Certified seeds improve germination, yield, and disease resistance.",General,English,seed
+What is seed treatment?,"seed,treatment",Seed treatment protects seeds from soil-borne diseases and pests.,Seed,English,seed
+Why is irrigation important?,irrigation,Proper irrigation ensures healthy crop growth and better yields.,Irrigation,English,water
+What causes waterlogging?,waterlogging,Excess water and poor drainage can cause waterlogging.,Irrigation,English,water
+How to prevent waterlogging?,waterlogging,Maintain field drainage and avoid over-irrigation.,Irrigation,English,water
+What is paddy?,"paddy,rice",Paddy refers to rice grown in the field before processing.,Rice,English,crop
+How to prepare land for rice?,"rice,land preparation",Plough the field thoroughly and level it before transplanting or sowing.,Rice,English,land
+When should rice be transplanted?,"rice,transplanting",Rice is generally transplanted 20–30 days after nursery sowing.,Rice,English,transplanting
+How to reduce water use in rice?,"rice,water",Use Alternate Wetting and Drying (AWD) where suitable to save water.,Rice,English,irrigation
+Best pH for rice cultivation?,"rice,soil,pH",Rice grows well in soil with a pH of about 5.5–7.0.,Rice,English,soil
+What is maize?,"maize,corn","Maize is an important cereal crop grown for food, feed, and industrial use.",Maize,English,crop
+When should maize be sown?,"maize,sowing",Maize sowing depends on the season and local climate.,Maize,English,sowing
+Best fertilizer for maize?,"maize,fertilizer",Apply fertilizers based on soil testing and crop requirements.,Maize,English,fertilizer
+How to increase maize yield?,"maize,yield","Use quality seeds, balanced nutrients, and proper irrigation.",Maize,English,yield
+Common pests in maize?,"maize,pest",Fall armyworm and stem borers are common maize pests.,Maize,English,pest
+What is sugarcane?,sugarcane,Sugarcane is a commercial crop used mainly for sugar production.,Sugarcane,English,crop
+Best season for sugarcane?,"sugarcane,season",Sugarcane planting time varies by region and climate.,Sugarcane,English,season
+How to irrigate sugarcane?,"sugarcane,irrigation",Provide irrigation according to soil moisture and crop stage.,Sugarcane,English,irrigation
+Best fertilizer for sugarcane?,"sugarcane,fertilizer",Use fertilizer according to soil-test recommendations.,Sugarcane,English,fertilizer
+Common diseases in sugarcane?,"sugarcane,disease",Red rot and smut are important sugarcane diseases.,Sugarcane,English,disease
+What is potato?,potato,Potato is an important vegetable crop grown during the Rabi season in many regions.,Potato,English,crop
+Best season for potato?,"potato,season",Potato is generally planted in the cool season.,Potato,English,season
+How to grow potato?,"potato,growing",Use healthy seed tubers and well-drained fertile soil.,Potato,English,cultivation
+Best fertilizer for potato?,"potato,fertilizer",Apply fertilizers based on soil testing and crop needs.,Potato,English,fertilizer
+Common potato diseases?,"potato,disease",Late blight and early blight are common potato diseases.,Potato,English,disease
+What is onion?,onion,Onion is a widely grown vegetable crop.,Onion,English,crop
+How often should onions be irrigated?,"onion,irrigation",Irrigate based on soil moisture and crop growth stage.,Onion,English,irrigation
+Best fertilizer for onion?,"onion,fertilizer",Use balanced nutrients according to soil-test recommendations.,Onion,English,fertilizer
+Why do onion leaves turn yellow?,"onion,yellow","Yellowing may occur due to nutrient deficiency, disease, or water stress.",Onion,English,problem
+Common onion diseases?,"onion,disease",Purple blotch and downy mildew are common onion diseases.,Onion,English,disease
+What is cotton?,cotton,Cotton is an important fiber crop.,Cotton,English,crop
+Best season for cotton?,"cotton,season",Cotton is generally grown during the Kharif season in many regions.,Cotton,English,season
+Best fertilizer for cotton?,"cotton,fertilizer",Use fertilizers according to soil-test recommendations.,Cotton,English,fertilizer
+Common cotton pests?,"cotton,pest",Pink bollworm and whitefly are common cotton pests.,Cotton,English,pest
+How to control whiteflies?,"whitefly,pest",Use integrated pest management and approved control measures as recommended locally.,Cotton,English,IPM
+What is soybean?,soybean,Soybean is an important oilseed and protein-rich crop.,Soybean,English,crop
+Best season for soybean?,"soybean,season",Soybean is generally cultivated during the Kharif season.,Soybean,English,season
+Best fertilizer for soybean?,"soybean,fertilizer",Apply nutrients based on soil testing and crop requirements.,Soybean,English,fertilizer
+Common soybean diseases?,"soybean,disease",Rust and bacterial pustule are common soybean diseases.,Soybean,English,disease
+What is chickpea?,chickpea,Chickpea is an important pulse crop grown during the Rabi season.,Pulse,English,crop
+Best fertilizer for chickpea?,"chickpea,fertilizer",Use balanced fertilization according to soil-test recommendations.,Pulse,English,fertilizer
+Common chickpea disease?,"chickpea,disease",Fusarium wilt is a major disease of chickpea.,Pulse,English,disease
+What is millet?,millet,Millets are nutritious cereals suitable for dryland farming.,Millet,English,crop
+Benefits of millet farming?,"millet,benefits",Millets require less water and are suitable for many rainfed areas.,Millet,English,benefits
+What is sunflower?,sunflower,Sunflower is an important oilseed crop.,Sunflower,English,crop
+Best fertilizer for sunflower?,"sunflower,fertilizer",Apply nutrients according to soil-test recommendations.,Sunflower,English,fertilizer
+Common sunflower disease?,"sunflower,disease",Downy mildew is a common sunflower disease.,Sunflower,English,disease
+What is groundnut?,groundnut,Groundnut is an important oilseed crop also known as peanut.,Groundnut,English,crop
+Best season for groundnut?,"groundnut,season",Groundnut is commonly grown during the Kharif season.,Groundnut,English,season
+Best fertilizer for groundnut?,"groundnut,fertilizer",Use balanced nutrients according to soil-test recommendations.,Groundnut,English,fertilizer
+Common groundnut diseases?,"groundnut,disease",Leaf spot and rust are common groundnut diseases.,Groundnut,English,disease
+What is zinc deficiency?,"zinc,deficiency",Zinc deficiency may reduce crop growth and cause chlorosis in some crops.,Nutrients,English,nutrient
+What is phosphorus deficiency?,"phosphorus,deficiency",Phosphorus deficiency can reduce root growth and plant vigor.,Nutrients,English,nutrient
+What is potassium deficiency?,"potassium,deficiency",Potassium deficiency may cause yellowing or scorching at leaf margins.,Nutrients,English,nutrient
+Why is balanced fertilization important?,"balanced,fertilizer",Balanced fertilization supports healthy crop growth and efficient nutrient use.,Fertilizer,English,fertilizer
+गेहूं में कौन सी खाद डालें?,"गेहूं,खाद,यूरिया",मिट्टी की जाँच के आधार पर संतुलित NPK उर्वरक का उपयोग करें।,Wheat,Hindi,fertilizer
+धान की बुवाई कब करें?,"धान,बुवाई",क्षेत्र और मौसम के अनुसार सामान्यतः जून से जुलाई में बुवाई की जाती है।,Rice,Hindi,sowing
+धान में पानी कितनी बार देना चाहिए?,"धान,सिंचाई",फसल की अवस्था और मिट्टी की नमी के अनुसार सिंचाई करें।,Rice,Hindi,irrigation
+मक्का की अच्छी किस्म कौन सी है?,"मक्का,बीज",अपने राज्य के कृषि विभाग द्वारा अनुशंसित उन्नत किस्म का चयन करें।,Maize,Hindi,seed
+टमाटर में झुलसा रोग का उपचार क्या है?,"टमाटर,झुलसा",रोगग्रस्त पत्तियाँ हटाएँ और कृषि विशेषज्ञ की सलाह अनुसार फफूंदनाशक का उपयोग करें।,Tomato,Hindi,disease
+प्याज की सिंचाई कितनी बार करें?,"प्याज,सिंचाई",मिट्टी और मौसम के अनुसार नियमित अंतराल पर सिंचाई करें।,Onion,Hindi,irrigation
+सरसों की बुवाई कब करें?,"सरसों,बुवाई",सरसों की बुवाई सामान्यतः अक्टूबर से नवंबर के बीच की जाती है।,Mustard,Hindi,sowing
+गन्ने में लाल सड़न रोग क्या है?,"गन्ना,रोग",लाल सड़न गन्ने का प्रमुख फफूंदजनित रोग है।,Sugarcane,Hindi,disease
+जैविक खेती क्या है?,जैविक खेती,जैविक खेती में रासायनिक उर्वरकों और कीटनाशकों का न्यूनतम उपयोग किया जाता है।,Organic Farming,Hindi,organic
+ड्रिप सिंचाई क्या है?,"ड्रिप,सिंचाई",ड्रिप सिंचाई में पानी सीधे पौधों की जड़ों तक पहुँचाया जाता है।,Irrigation,Hindi,water
+नीम का उपयोग कीट नियंत्रण में कैसे करें?,"नीम,कीट",नीम आधारित उत्पाद कई कीटों के नियंत्रण में सहायक होते हैं।,Pest,Hindi,organic
+मिट्टी की जाँच क्यों आवश्यक है?,"मिट्टी,जाँच",मिट्टी की जाँच से पोषक तत्वों की जानकारी मिलती है और सही उर्वरक चयन में सहायता मिलती है।,Soil,Hindi,soil
+फसल चक्र क्या है?,फसल चक्र,एक ही खेत में अलग-अलग मौसम में अलग फसलें उगाने को फसल चक्र कहते हैं।,Soil,Hindi,rotation
+पीएम किसान योजना क्या है?,पीएम किसान,यह पात्र किसानों के लिए आय सहायता योजना है।,Government Scheme,Hindi,scheme
+यूरिया कब डालना चाहिए?,यूरिया,यूरिया का उपयोग फसल की अवस्था और मिट्टी की जाँच के अनुसार करें।,Fertilizer,Hindi,fertilizer
+What is banana?,"banana,fruit",Banana is a tropical fruit crop grown in warm and humid climates.,Banana,English,fruit
+Best fertilizer for banana?,"banana,fertilizer",Apply fertilizers according to soil-test recommendations and crop stage.,Banana,English,fertilizer
+Common banana disease?,"banana,disease",Panama wilt and Sigatoka leaf spot are common banana diseases.,Banana,English,disease
+How to increase banana yield?,"banana,yield","Use healthy suckers, balanced nutrition, timely irrigation, and pest management.",Banana,English,yield
+What is mango?,"mango,fruit",Mango is a major tropical fruit crop in India.,Mango,English,fruit
+Common mango disease?,"mango,disease",Powdery mildew and anthracnose are common mango diseases.,Mango,English,disease
+How to control mango hoppers?,"mango,pest",Monitor orchards regularly and use approved IPM practices when required.,Mango,English,IPM
+Best fertilizer for mango?,"mango,fertilizer",Apply nutrients according to tree age and soil-test recommendations.,Mango,English,fertilizer
+What is guava?,"guava,fruit",Guava is a nutritious fruit crop suitable for tropical and subtropical regions.,Guava,English,fruit
+Common guava disease?,"guava,disease",Wilt and anthracnose are common diseases in guava.,Guava,English,disease
+What is papaya?,"papaya,fruit",Papaya is a fast-growing tropical fruit crop.,Papaya,English,fruit
+Common papaya disease?,"papaya,disease",Papaya ringspot virus is a major disease affecting papaya.,Papaya,English,disease
+What is cabbage?,"cabbage,vegetable",Cabbage is a cool-season leafy vegetable crop.,Cabbage,English,vegetable
+Common cabbage pest?,"cabbage,pest",Diamondback moth is a common cabbage pest.,Cabbage,English,pest
+What is cauliflower?,"cauliflower,vegetable",Cauliflower is a cool-season vegetable grown for its edible curd.,Cauliflower,English,vegetable
+Best fertilizer for cauliflower?,"cauliflower,fertilizer",Use balanced nutrients according to soil testing.,Cauliflower,English,fertilizer
+What is brinjal?,"brinjal,eggplant",Brinjal is a widely cultivated vegetable crop.,Brinjal,English,vegetable
+Common brinjal pest?,"brinjal,fruit borer",Fruit and shoot borer is a major pest of brinjal.,Brinjal,English,pest
+How to grow chilli?,"chilli,growing","Use healthy seedlings, fertile soil, and proper irrigation.",Chilli,English,vegetable
+Common chilli disease?,"chilli,disease",Leaf curl virus is a common chilli disease.,Chilli,English,disease
+What is cucumber?,cucumber,Cucumber is a warm-season vegetable crop.,Cucumber,English,vegetable
+How often should cucumber be irrigated?,"cucumber,irrigation",Irrigate regularly while avoiding waterlogging.,Cucumber,English,irrigation
+What is watermelon?,watermelon,Watermelon is a summer fruit crop requiring warm weather.,Watermelon,English,fruit
+Best season for watermelon?,"watermelon,season",Watermelon is generally grown during spring and summer.,Watermelon,English,season
+What is muskmelon?,muskmelon,Muskmelon is a warm-season fruit crop.,Muskmelon,English,fruit
+Common diseases in cucurbits?,"cucurbits,disease",Powdery mildew and downy mildew are common diseases.,Vegetables,English,disease
+How to prevent fungal diseases?,"fungus,disease","Use disease-free seeds, crop rotation, and recommended fungicides when necessary.",General,English,disease
+Why do leaves curl?,leaf curl,"Leaf curl may result from viruses, pests, or environmental stress.",General,English,problem
+What causes flower drop?,flower drop,"Flower drop may occur due to temperature stress, nutrient imbalance, or poor pollination.",General,English,problem
+What is climate-smart agriculture?,climate-smart,Climate-smart agriculture improves productivity while adapting to climate change.,General,English,climate
+How does rainfall affect crops?,rainfall,Excess or insufficient rainfall can reduce crop growth and yield.,Weather,English,weather
+What is drought?,drought,Drought is a prolonged period of insufficient rainfall affecting agriculture.,Weather,English,weather
+How to manage drought?,"drought,management","Use drought-tolerant varieties, mulching, and efficient irrigation practices.",Weather,English,weather
+What is hail damage?,hail,Hail can physically damage crops and reduce yield.,Weather,English,weather
+How to protect crops from frost?,frost,"Use irrigation, mulching, or protective covers where appropriate.",Weather,English,weather
+Why monitor weather forecasts?,"weather,forecast","Weather forecasts help farmers plan irrigation, spraying, and harvesting.",Weather,English,weather
+When should pesticides be sprayed?,spraying,Spray pesticides only when required and follow label instructions and local recommendations.,Pest,English,safety
+Can pesticides be mixed?,"pesticides,mixing",Mix pesticides only if the product labels permit compatibility.,Pest,English,safety
+How to store fertilizers?,"fertilizer,storage","Store fertilizers in a dry, cool place away from moisture.",Fertilizer,English,storage
+How to store seeds?,"seed,storage","Store seeds in clean, dry, and airtight containers under cool conditions.",Seed,English,storage
+What is seed germination?,"seed,germination",Seed germination is the process by which a seed begins to grow into a plant.,Seed,English,seed
+How to improve seed germination?,"seed,germination","Use quality seeds, proper moisture, and suitable temperature.",Seed,English,seed
+What is greenhouse farming?,greenhouse,Greenhouse farming protects crops from adverse weather and allows controlled cultivation.,Protected Cultivation,English,greenhouse
+Benefits of greenhouse farming?,"greenhouse,benefits",It improves productivity and enables year-round cultivation for suitable crops.,Protected Cultivation,English,greenhouse
+What is polyhouse farming?,polyhouse,Polyhouse farming provides a controlled environment for crop production.,Protected Cultivation,English,polyhouse
+What is PMFBY?,"pmfby,crop insurance",Pradhan Mantri Fasal Bima Yojana provides crop insurance to eligible farmers.,Government Scheme,English,scheme
+What is e-NAM?,"eNAM,market",e-NAM is an electronic platform connecting agricultural markets across India.,Government Scheme,English,scheme
+What is Soil Health Card?,soil health card,The Soil Health Card provides information about soil nutrients and fertilizer recommendations.,Government Scheme,English,scheme
+Why is farm record keeping important?,farm records,"Maintaining farm records helps monitor costs, production, and profitability.",Farm Management,English,management
+How to prepare soil before sowing?,"soil preparation,field","Prepare the field by ploughing, leveling, and adding organic manure if needed.",Soil,English,soil
+Best time to irrigate crops?,"irrigation,time",Early morning or evening irrigation helps reduce water loss.,Irrigation,English,water
+What causes leaf yellowing?,"yellow leaves,nutrients","Leaf yellowing may result from nutrient deficiency, pests, diseases, or excess water.",General,English,problem
+How to prevent soil erosion?,soil erosion,"Use cover crops, contour farming, and mulching to reduce soil erosion.",Soil,English,soil
+What is biofertilizer?,biofertilizer,Biofertilizers contain beneficial microorganisms that improve nutrient availability.,Fertilizer,English,organic
+Benefits of crop diversification?,crop diversification,Growing different crops reduces risk and improves soil health.,General,English,management
+How to conserve rainwater on farms?,rainwater harvesting,Construct farm ponds and practice rainwater harvesting to store water.,Water Management,English,water
+What is weed management?,weed management,"Weed management helps reduce competition for nutrients, sunlight, and water.",General,English,weed
+Best way to improve soil organic matter?,organic matter,"Add compost, farmyard manure, and grow green manure crops.",Soil,English,soil
+How to reduce fertilizer loss?,fertilizer efficiency,Apply fertilizers at the right time and in the recommended quantity.,Fertilizer,English,fertilizer
+What is green manure?,green manure,Green manure crops are grown and incorporated into the soil to improve fertility.,Soil,English,organic
+How to protect crops from heat?,heat stress,Provide timely irrigation and use mulching to reduce heat stress.,Weather,English,climate
+Common symptoms of potassium deficiency?,potassium deficiency,Leaf margins may turn yellow or brown and plant growth may slow.,Nutrients,English,nutrient
+Why is balanced irrigation important?,balanced irrigation,Too much or too little water can reduce crop yield and quality.,Irrigation,English,water
+How to improve water use efficiency?,water efficiency,"Use drip irrigation, mulching, and proper scheduling.",Irrigation,English,water
+गेहूं में सिंचाई कब करनी चाहिए?,"गेहूं,सिंचाई",फसल की अवस्था और मिट्टी की नमी के अनुसार समय पर सिंचाई करें।,Wheat,Hindi,irrigation
+धान में खरपतवार कैसे नियंत्रित करें?,"धान,खरपतवार",समय पर निराई करें तथा आवश्यकता होने पर अनुशंसित खरपतवारनाशी का उपयोग करें।,Rice,Hindi,weed
+मक्का की फसल में कीट नियंत्रण कैसे करें?,"मक्का,कीट",नियमित निरीक्षण करें और आवश्यकता होने पर अनुशंसित नियंत्रण उपाय अपनाएँ।,Maize,Hindi,pest
+गन्ने की फसल में सिंचाई कैसे करें?,"गन्ना,सिंचाई",मिट्टी की नमी और फसल की अवस्था के अनुसार सिंचाई करें।,Sugarcane,Hindi,irrigation
+आलू की फसल में झुलसा रोग कैसे रोकें?,"आलू,झुलसा",रोगमुक्त बीज का उपयोग करें और आवश्यकता होने पर अनुशंसित फफूंदनाशक का प्रयोग करें।,Potato,Hindi,disease
+टमाटर के पौधों की देखभाल कैसे करें?,"टमाटर,देखभाल","समय पर सिंचाई, संतुलित पोषण और कीट-रोग की निगरानी करें।",Tomato,Hindi,management
+प्याज की अच्छी उपज कैसे प्राप्त करें?,"प्याज,उपज","उन्नत बीज, संतुलित उर्वरक और उचित सिंचाई अपनाएँ।",Onion,Hindi,yield
+सरसों में माहू का नियंत्रण कैसे करें?,"सरसों,माहू",नीम आधारित उत्पाद या कृषि विशेषज्ञ द्वारा अनुशंसित उपाय अपनाएँ।,Mustard,Hindi,pest
+कपास में गुलाबी सुंडी से कैसे बचें?,"कपास,गुलाबी सुंडी",फेरोमोन ट्रैप और समेकित कीट प्रबंधन (IPM) अपनाएँ।,Cotton,Hindi,IPM
+सोयाबीन की बुवाई कब करें?,"सोयाबीन,बुवाई",मानसून की शुरुआत के बाद उचित नमी होने पर बुवाई करें।,Soybean,Hindi,sowing
+चना की फसल में उर्वरक कब डालें?,"चना,उर्वरक",मिट्टी परीक्षण के अनुसार बुवाई के समय उर्वरक दें।,Pulse,Hindi,fertilizer
+केले की खेती के लिए कौन सी मिट्टी उपयुक्त है?,"केला,मिट्टी",अच्छी जल निकासी वाली दोमट मिट्टी उपयुक्त मानी जाती है।,Banana,Hindi,soil
+आम में फूल झड़ने का कारण क्या है?,"आम,फूल","तापमान, पोषण की कमी या अन्य तनाव इसके कारण हो सकते हैं।",Mango,Hindi,problem
+अमरूद की छंटाई क्यों जरूरी है?,"अमरूद,छंटाई",छंटाई से पौधे का आकार बेहतर रहता है और उत्पादन में मदद मिलती है।,Guava,Hindi,management
+पपीते में वायरस रोग से कैसे बचें?,"पपीता,वायरस",स्वस्थ पौध सामग्री का उपयोग करें और रोगग्रस्त पौधों को हटाएँ।,Papaya,Hindi,disease
+जैव उर्वरक के क्या लाभ हैं?,जैव उर्वरक,जैव उर्वरक पोषक तत्वों की उपलब्धता बढ़ाने और मिट्टी की गुणवत्ता सुधारने में मदद करते हैं।,Fertilizer,Hindi,organic
+मल्चिंग के क्या फायदे हैं?,मल्चिंग,मल्चिंग से नमी संरक्षित रहती है और खरपतवार कम होते हैं।,Soil,Hindi,soil
+ड्रिप सिंचाई के क्या लाभ हैं?,"ड्रिप,लाभ",इससे पानी की बचत होती है और पौधों की जड़ों तक सीधे पानी पहुँचता है।,Irrigation,Hindi,water
+फसल बीमा क्यों जरूरी है?,फसल बीमा,प्राकृतिक आपदाओं से होने वाले नुकसान के जोखिम को कम करने में सहायता मिलती है।,Government Scheme,Hindi,scheme
+मिट्टी का पीएच क्या होता है?,"मिट्टी,pH",मिट्टी का pH उसकी अम्लीय या क्षारीय प्रकृति को दर्शाता है।,Soil,Hindi,soil
+How to prepare a seedbed for vegetables?,"vegetables,seedbed",Prepare a fine and level seedbed with good drainage and organic manure.,Vegetables,English,cultivation
+What is direct seeding?,direct seeding,Direct seeding means sowing seeds directly into the main field.,General,English,cultivation
+How to reduce water evaporation from soil?,"soil,water",Use mulching and irrigate during cooler hours.,Water Management,English,water
+Why is crop spacing important?,crop spacing,"Proper spacing improves sunlight, airflow, and plant growth.",General,English,cultivation
+What is intercropping?,intercropping,Intercropping is growing two or more crops together in the same field.,General,English,cropping
+Benefits of intercropping?,"intercropping,benefits",It improves resource use and may reduce pest pressure.,General,English,cropping
+How to identify healthy seeds?,healthy seeds,"Healthy seeds are clean, disease-free, and have high germination potential.",Seed,English,seed
+What is seed dormancy?,seed dormancy,Seed dormancy is the condition in which seeds do not germinate even under favorable conditions.,Seed,English,seed
+What is precision farming?,precision farming,Precision farming uses technology to optimize crop production.,Technology,English,modern farming
+Benefits of drones in agriculture?,drone,"Drones help monitor crop health, spraying, and field mapping.",Technology,English,drone
+What is hydroponics?,hydroponics,Hydroponics is growing plants without soil using nutrient-rich water.,Modern Farming,English,hydroponics
+What is aeroponics?,aeroponics,Aeroponics grows plants with roots suspended in air and supplied with nutrient mist.,Modern Farming,English,aeroponics
+What is smart irrigation?,smart irrigation,Smart irrigation uses sensors and automation to optimize water use.,Technology,English,IoT
+How can farmers save water?,water saving,"Use drip irrigation, mulching, and rainwater harvesting.",Water Management,English,water
+What is integrated nutrient management?,INM,Integrated Nutrient Management combines organic and inorganic nutrient sources.,Nutrients,English,INM
+Best way to compost farm waste?,compost,Convert crop residues into compost through controlled decomposition.,Organic Farming,English,organic
+Why are earthworms beneficial?,earthworms,Earthworms improve soil structure and nutrient cycling.,Soil,English,organic
+How to prevent pest resistance?,pest resistance,Rotate pesticides with different modes of action and follow recommendations.,Pest,English,IPM
+What is biological pest control?,biological control,It uses natural enemies to control crop pests.,Pest,English,IPM
+How to improve pollination?,pollination,Protect pollinators and avoid unnecessary pesticide use during flowering.,General,English,pollination
+गेहूं में खरपतवार नियंत्रण कैसे करें?,"गेहूं,खरपतवार",समय पर निराई करें और आवश्यकता होने पर अनुशंसित खरपतवारनाशी का उपयोग करें।,Wheat,Hindi,weed
+धान की अच्छी किस्म कैसे चुनें?,"धान,बीज",अपने क्षेत्र के लिए कृषि विभाग द्वारा अनुशंसित किस्म का चयन करें।,Rice,Hindi,seed
+मक्का की फसल में यूरिया कब डालें?,"मक्का,यूरिया",फसल की वृद्धि अवस्था और मिट्टी परीक्षण के अनुसार यूरिया दें।,Maize,Hindi,fertilizer
+गन्ने की अच्छी पैदावार कैसे बढ़ाएँ?,"गन्ना,उपज","उन्नत किस्म, संतुलित उर्वरक और समय पर सिंचाई अपनाएँ।",Sugarcane,Hindi,yield
+आलू की खुदाई कब करें?,"आलू,कटाई",जब पौधे सूखने लगें और कंद पूरी तरह विकसित हो जाएँ तब खुदाई करें।,Potato,Hindi,harvest
+टमाटर में फल फटने का कारण क्या है?,"टमाटर,फल",अनियमित सिंचाई और अचानक नमी परिवर्तन इसका कारण हो सकते हैं।,Tomato,Hindi,problem
+प्याज की फसल में खरपतवार कैसे हटाएँ?,"प्याज,खरपतवार",समय पर निराई करें और आवश्यकता होने पर अनुशंसित खरपतवारनाशी अपनाएँ।,Onion,Hindi,weed
+सरसों में उर्वरक की सही मात्रा क्या है?,"सरसों,उर्वरक",मिट्टी परीक्षण के आधार पर संतुलित उर्वरक दें।,Mustard,Hindi,fertilizer
+कपास की सिंचाई कब करनी चाहिए?,"कपास,सिंचाई",मिट्टी की नमी और फसल की अवस्था के अनुसार सिंचाई करें।,Cotton,Hindi,irrigation
+सोयाबीन में खरपतवार नियंत्रण कैसे करें?,"सोयाबीन,खरपतवार",प्रारंभिक अवस्था में समय पर खरपतवार नियंत्रण करें।,Soybean,Hindi,weed
+चना की फसल में रोग से कैसे बचें?,"चना,रोग",रोगमुक्त बीज और फसल चक्र अपनाएँ।,Pulse,Hindi,disease
+केले में अधिक फल कैसे प्राप्त करें?,"केला,उपज","उचित पोषण, सिंचाई और स्वस्थ पौध सामग्री का उपयोग करें।",Banana,Hindi,yield
+आम के पेड़ों की छंटाई कब करें?,"आम,छंटाई",फल तुड़ाई के बाद आवश्यकता अनुसार छंटाई करें।,Mango,Hindi,management
+अमरूद के पौधों में खाद कब डालें?,"अमरूद,खाद",वृद्धि और फलन अवस्था के अनुसार संतुलित उर्वरक दें।,Guava,Hindi,fertilizer
+पपीते में सिंचाई कितनी बार करें?,"पपीता,सिंचाई",मिट्टी की नमी के अनुसार नियमित सिंचाई करें।,Papaya,Hindi,irrigation
+सब्जियों में जैविक खेती कैसे करें?,"सब्जी,जैविक","कम्पोस्ट, गोबर की खाद और जैव उर्वरकों का उपयोग करें।",Organic Farming,Hindi,organic
+ग्रीनहाउस खेती के क्या लाभ हैं?,ग्रीनहाउस,ग्रीनहाउस नियंत्रित वातावरण प्रदान करता है जिससे उत्पादन बढ़ सकता है।,Protected Cultivation,Hindi,greenhouse
+वर्मी कम्पोस्ट क्या है?,वर्मी कम्पोस्ट,केंचुओं द्वारा तैयार की गई जैविक खाद को वर्मी कम्पोस्ट कहते हैं।,Organic Farming,Hindi,organic
+फसल की पैदावार बढ़ाने का सबसे अच्छा तरीका क्या है?,उपज,"उन्नत बीज, संतुलित पोषण, समय पर सिंचाई और कीट-रोग प्रबंधन अपनाएँ।",General,Hindi,yield
+कृषि में मौसम की जानकारी क्यों जरूरी है?,मौसम,"मौसम की जानकारी से सिंचाई, बुवाई और कटाई की बेहतर योजना बनाई जा सकती है।",Weather,Hindi,weather
+What is crop maturity?,crop maturity,Crop maturity is the stage when a crop is ready for harvesting.,General,English,harvest
+How to reduce post-harvest losses?,post harvest,Store produce properly and handle it carefully after harvest.,Post Harvest,English,storage
+Why is farm hygiene important?,farm hygiene,Good farm hygiene reduces disease spread and improves crop health.,General,English,management
+How to maintain farm tools?,farm tools,"Clean, dry, and service tools regularly to extend their lifespan.",Farm Machinery,English,equipment
+What is sustainable agriculture?,sustainable agriculture,Sustainable agriculture balances productivity with environmental conservation.,General,English,sustainability
+What is dairy farming?,"dairy,farming",Dairy farming involves raising cattle mainly for milk production.,Dairy,English,livestock
+How to increase milk production?,"milk,dairy","Provide balanced nutrition, clean water, and proper animal healthcare.",Dairy,English,milk
+What is mastitis?,mastitis,Mastitis is an inflammation of the udder that reduces milk production.,Dairy,English,disease
+How often should dairy animals be vaccinated?,"vaccination,dairy",Follow the vaccination schedule recommended by your local veterinarian.,Dairy,English,health
+What is balanced cattle feed?,cattle feed,Balanced feed contains the nutrients required for healthy growth and milk production.,Dairy,English,nutrition
+Why is clean drinking water important for cattle?,"cattle,water","Clean water supports digestion, milk production, and overall health.",Dairy,English,health
+What is poultry farming?,poultry,"Poultry farming involves raising chickens, ducks, or other birds for eggs and meat.",Poultry,English,livestock
+How to improve egg production?,"eggs,poultry","Provide balanced feed, proper lighting, and disease management.",Poultry,English,production
+Common poultry diseases?,"poultry,disease",Newcastle disease and coccidiosis are common poultry diseases.,Poultry,English,disease
+What is broiler farming?,broiler,Broiler farming focuses on raising chickens for meat production.,Poultry,English,meat
+What is layer farming?,layer,Layer farming is done for commercial egg production.,Poultry,English,eggs
+What is fish farming?,"fish,farming",Fish farming is the controlled cultivation of fish in ponds or tanks.,Fisheries,English,aquaculture
+Best fish for freshwater farming?,fish,"Rohu, Catla, and Mrigal are commonly farmed freshwater fish in India.",Fisheries,English,fish
+How to maintain pond water quality?,"pond,water",Monitor water quality and avoid overfeeding fish.,Fisheries,English,water
+What is beekeeping?,"beekeeping,honey",Beekeeping is the practice of raising honey bees for honey and pollination.,Beekeeping,English,honey
+Benefits of beekeeping?,bees,Beekeeping increases pollination and provides honey and beeswax.,Beekeeping,English,benefits
+Why are bees important for farming?,"pollination,bees","Bees improve pollination, leading to better crop yields.",Beekeeping,English,pollination
+How to protect bee colonies?,bees,Avoid spraying pesticides during flowering and maintain healthy hives.,Beekeeping,English,protection
+What is silage?,silage,Silage is preserved green fodder used for feeding livestock.,Dairy,English,fodder
+Benefits of silage?,silage,Silage provides nutritious fodder throughout the year.,Dairy,English,fodder
+दूध उत्पादन कैसे बढ़ाएँ?,"दूध,उत्पादन","संतुलित आहार, स्वच्छ पानी और नियमित स्वास्थ्य देखभाल से दूध उत्पादन बढ़ाया जा सकता है।",Dairy,Hindi,milk
+दुधारू पशुओं को क्या खिलाना चाहिए?,"पशु,चारा","हरा चारा, सूखा चारा और संतुलित पशु आहार देना चाहिए।",Dairy,Hindi,nutrition
+पशुओं का टीकाकरण क्यों जरूरी है?,टीकाकरण,टीकाकरण से कई संक्रामक रोगों से बचाव होता है।,Dairy,Hindi,health
+मास्टाइटिस क्या है?,मास्टाइटिस,यह थन का संक्रमण है जिससे दूध उत्पादन कम हो सकता है।,Dairy,Hindi,disease
+मुर्गी पालन के क्या लाभ हैं?,मुर्गी पालन,मुर्गी पालन से अंडे और मांस का उत्पादन होता है तथा अतिरिक्त आय प्राप्त हो सकती है।,Poultry,Hindi,income
+अंडा उत्पादन कैसे बढ़ाएँ?,अंडा,"संतुलित आहार, स्वच्छ वातावरण और उचित प्रकाश व्यवस्था रखें।",Poultry,Hindi,production
+मुर्गियों में सामान्य रोग कौन से हैं?,"मुर्गी,रोग",रानीखेत रोग और कॉक्सिडियोसिस सामान्य रोग हैं।,Poultry,Hindi,disease
+मछली पालन के लिए कौन सी मछलियाँ अच्छी हैं?,मछली,"रोहू, कतला और मृगल भारत में लोकप्रिय प्रजातियाँ हैं।",Fisheries,Hindi,fish
+तालाब की देखभाल कैसे करें?,तालाब,तालाब का पानी साफ रखें और अधिक मात्रा में चारा न डालें।,Fisheries,Hindi,water
+मधुमक्खी पालन के क्या लाभ हैं?,मधुमक्खी,इससे शहद उत्पादन और फसलों में परागण दोनों बढ़ते हैं।,Beekeeping,Hindi,honey
+शहद उत्पादन कैसे बढ़ाएँ?,शहद,स्वस्थ कॉलोनी बनाए रखें और फूलों वाले क्षेत्रों में छत्ते रखें।,Beekeeping,Hindi,production
+पशुओं को साफ पानी क्यों देना चाहिए?,"पशु,पानी",स्वच्छ पानी पशुओं के स्वास्थ्य और उत्पादन के लिए आवश्यक है।,Dairy,Hindi,health
+हरा चारा क्यों जरूरी है?,हरा चारा,हरा चारा पशुओं को आवश्यक पोषक तत्व प्रदान करता है।,Dairy,Hindi,fodder
+साइलेज क्या है?,साइलेज,हरे चारे को सुरक्षित तरीके से संरक्षित करके बनाया गया पशु आहार साइलेज कहलाता है।,Dairy,Hindi,fodder
+बकरी पालन के क्या लाभ हैं?,बकरी,बकरी पालन कम लागत में अतिरिक्त आय का अच्छा स्रोत है।,Goat Farming,Hindi,income
+भेड़ पालन क्यों किया जाता है?,भेड़,भेड़ पालन ऊन और मांस उत्पादन के लिए किया जाता है।,Sheep Farming,Hindi,livestock
+सूअर पालन के क्या लाभ हैं?,सूअर,सूअर पालन तेजी से बढ़ने वाला और लाभदायक व्यवसाय हो सकता है।,Pig Farming,Hindi,income
+पशुओं में खुरपका-मुंहपका रोग क्या है?,FMD,यह एक संक्रामक रोग है जिससे पशुओं की उत्पादकता प्रभावित हो सकती है।,Dairy,Hindi,disease
+पशुओं के रहने की जगह कैसी होनी चाहिए?,"पशु,आवास","साफ, सूखी और हवादार जगह पशुओं के लिए उपयुक्त होती है।",Dairy,Hindi,housing
+कृषि के साथ पशुपालन क्यों करना चाहिए?,एकीकृत खेती,फसल और पशुपालन को साथ करने से आय के कई स्रोत बनते हैं।,Integrated Farming,Hindi,income
+What is integrated farming?,integrated farming,"Integrated farming combines crops, livestock, fisheries, or other enterprises to improve income and sustainability.",Integrated Farming,English,farming
+How does livestock help farming?,livestock,"Livestock provide manure, income, and support integrated farming systems.",Integrated Farming,English,livestock
+What is a weather forecast?,"weather,forecast",A weather forecast predicts future weather conditions to help farmers plan activities.,Weather,English,forecast
+How does rainfall affect crops?,"rainfall,crops",Too little or too much rainfall can reduce crop yield.,Weather,English,rain
+What is a heat wave?,heat wave,A heat wave is a period of unusually high temperatures that may stress crops.,Weather,English,climate
+How can farmers protect crops from frost?,frost,"Use irrigation, mulching, or protective covers during frost conditions.",Weather,English,protection
+Why should farmers check weather forecasts?,weather,"Weather forecasts help plan sowing, irrigation, and harvesting.",Weather,English,planning
+What is climate-smart agriculture?,climate smart,Climate-smart agriculture improves productivity while adapting to climate change.,Climate,English,CSA
+How to reduce drought impact?,drought,Use drought-tolerant varieties and efficient irrigation methods.,Climate,English,drought
+What is a mandi?,mandi,A mandi is an agricultural market where farmers sell their produce.,Marketing,English,market
+Why compare mandi prices?,mandi price,Comparing prices helps farmers get better returns for their crops.,Marketing,English,price
+How to store grains safely?,grain storage,"Store grains in clean, dry, and pest-free storage structures.",Storage,English,postharvest
+What is MSP?,MSP,Minimum Support Price is the minimum price announced by the government for selected crops.,Government,English,scheme
+Benefits of PM-KISAN?,PM-KISAN,PM-KISAN provides income support to eligible farmers.,Government,English,scheme
+What is PMFBY?,PMFBY,Pradhan Mantri Fasal Bima Yojana provides crop insurance coverage.,Government,English,insurance
+Why use a tractor?,tractor,Tractors reduce labor and improve farm efficiency.,Machinery,English,equipment
+What is a seed drill?,seed drill,A seed drill sows seeds uniformly at proper depth and spacing.,Machinery,English,equipment
+Benefits of rotavator?,rotavator,A rotavator prepares soil quickly before sowing.,Machinery,English,equipment
+What is AI in agriculture?,AI,Artificial Intelligence helps farmers make data-driven decisions.,Technology,English,AI
+How does AI help farmers?,AI advisory,"AI analyzes weather, soil, and crop data for better recommendations.",Technology,English,AI
+What is remote sensing?,remote sensing,Remote sensing uses satellites or drones to monitor crop health.,Technology,English,satellite
+What is precision spraying?,precision spraying,Precision spraying applies pesticides only where needed.,Technology,English,smart farming
+मौसम पूर्वानुमान क्या होता है?,मौसम,मौसम पूर्वानुमान भविष्य के मौसम की जानकारी देता है जिससे किसान बेहतर योजना बना सकते हैं।,Weather,Hindi,forecast
+बारिश कम होने पर क्या करें?,कम बारिश,कम वर्षा की स्थिति में पानी की बचत और ड्रिप सिंचाई अपनाएँ।,Weather,Hindi,rain
+अधिक वर्षा से फसल कैसे बचाएँ?,अधिक बारिश,खेत में जल निकासी की उचित व्यवस्था करें।,Weather,Hindi,drainage
+पाला पड़ने पर क्या करें?,पाला,फसल को पाले से बचाने के लिए हल्की सिंचाई या ढकाव का उपयोग करें।,Weather,Hindi,protection
+किसानों के लिए मौसम की जानकारी क्यों जरूरी है?,मौसम,मौसम की जानकारी से खेती के कार्य सही समय पर किए जा सकते हैं।,Weather,Hindi,planning
+मंडी क्या होती है?,मंडी,मंडी वह स्थान है जहाँ किसान अपनी उपज बेचते हैं।,Marketing,Hindi,market
+मंडी भाव कैसे पता करें?,मंडी भाव,सरकारी पोर्टल या मोबाइल ऐप के माध्यम से मंडी भाव देख सकते हैं।,Marketing,Hindi,price
+एमएसपी क्या है?,एमएसपी,न्यूनतम समर्थन मूल्य सरकार द्वारा निर्धारित न्यूनतम खरीद मूल्य है।,Government,Hindi,MSP
+पीएम किसान योजना का लाभ कैसे लें?,पीएम किसान,पात्र किसान ऑनलाइन या CSC केंद्र के माध्यम से आवेदन कर सकते हैं।,Government,Hindi,scheme
+फसल बीमा क्यों जरूरी है?,फसल बीमा,यह प्राकृतिक आपदाओं से होने वाले नुकसान से सुरक्षा देता है।,Government,Hindi,insurance
+ट्रैक्टर के क्या लाभ हैं?,ट्रैक्टर,ट्रैक्टर खेती के कार्य तेजी और कम मेहनत में पूरे करता है।,Machinery,Hindi,equipment
+सीड ड्रिल क्या है?,सीड ड्रिल,सीड ड्रिल समान दूरी और गहराई पर बीज बोने का उपकरण है।,Machinery,Hindi,equipment
+रोटावेटर का उपयोग कब करें?,रोटावेटर,बुवाई से पहले खेत तैयार करने में इसका उपयोग किया जाता है।,Machinery,Hindi,equipment
+कम्बाइन हार्वेस्टर क्या है?,हार्वेस्टर,"यह मशीन कटाई, मड़ाई और सफाई एक साथ करती है।",Machinery,Hindi,harvest
+कृषि में AI क्या है?,AI,AI किसानों को बेहतर निर्णय लेने में मदद करता है।,Technology,Hindi,AI
+ड्रोन का उपयोग खेती में कैसे होता है?,ड्रोन,ड्रोन से फसल की निगरानी और कीटनाशक छिड़काव किया जाता है।,Technology,Hindi,drone
+स्मार्ट खेती क्या है?,स्मार्ट खेती,"सेंसर, AI और IoT आधारित आधुनिक खेती को स्मार्ट खेती कहते हैं।",Technology,Hindi,smart farming
+IoT क्या है?,IoT,IoT उपकरण खेत से डेटा एकत्र करके निर्णय लेने में मदद करते हैं।,Technology,Hindi,IoT
+सैटेलाइट से खेती में क्या लाभ है?,सैटेलाइट,सैटेलाइट चित्रों से फसल की स्थिति और मौसम की जानकारी मिलती है।,Technology,Hindi,satellite
+AgriSmart AI क्या कर सकता है?,AgriSmart AI,"यह मौसम, फसल, मिट्टी और खेती से संबंधित सुझाव देने में सहायता करता है।",Technology,Hindi,AI assistant
+What is crop advisory?,crop advisory,Crop advisory provides recommendations based on crop stage and weather.,Technology,English,advisory
+How can mobile apps help farmers?,mobile apps,"Agriculture apps provide weather, market prices, and farming guidance.",Technology,English,mobile
+What is smart farming?,smart farming,"Smart farming combines AI, IoT, and data analytics to improve productivity.",Technology,English,digital agriculture
+How to reduce farming costs?,cost reduction,"Use efficient irrigation, quality seeds, and proper farm planning.",General,English,economics
+What is digital agriculture?,digital agriculture,Digital agriculture uses technology to improve farm management and productivity.,Technology,English,digital
+What is cold storage?,cold storage,Cold storage helps preserve fruits and vegetables by maintaining low temperatures.,Post Harvest,English,storage
+Why is cold storage important?,cold storage,It reduces spoilage and extends shelf life of produce.,Post Harvest,English,storage
+What is food processing?,food processing,Food processing converts raw agricultural products into value-added products.,Food Processing,English,processing
+Benefits of food processing?,food processing,"It increases shelf life, reduces waste, and improves income.",Food Processing,English,value addition
+How to reduce fruit wastage?,fruit wastage,Harvest at the right stage and store produce under proper conditions.,Post Harvest,English,storage
+What is value addition in agriculture?,value addition,Converting raw produce into processed products increases market value.,Agribusiness,English,business
+How to start an agribusiness?,agribusiness,"Identify market demand, prepare a business plan, and register your enterprise.",Agribusiness,English,startup
+What is FPO?,FPO,A Farmer Producer Organization helps farmers market produce collectively.,Government,English,FPO
+Benefits of Farmer Producer Organizations?,FPO benefits,FPOs improve bargaining power and market access.,Government,English,organization
+How can farmers export crops?,export,Farmers can export through registered exporters by meeting quality standards.,Export,English,trade
+Why is grading important?,grading,Grading improves market value and customer trust.,Marketing,English,quality
+What is packaging in agriculture?,packaging,Proper packaging protects produce during transportation.,Marketing,English,packaging
+How to reduce post-harvest losses?,post harvest,"Proper harvesting, grading, packaging, and storage reduce losses.",Post Harvest,English,storage
+What is organic certification?,organic certification,Organic certification verifies compliance with organic farming standards.,Organic Farming,English,certification
+Benefits of organic certification?,organic farming,Certified products often receive better market prices.,Organic Farming,English,marketing
+How to market farm products online?,online selling,Use e-commerce platforms and social media to reach customers.,Marketing,English,digital
+What is contract farming?,contract farming,Farmers produce crops under agreements with buyers.,Marketing,English,business
+Benefits of contract farming?,contract farming,It provides assured markets and technical support.,Marketing,English,agreement
+What is agri startup?,startup,An agri startup develops innovative agricultural products or services.,Technology,English,startup
+How can AI improve agribusiness?,AI business,"AI predicts demand, prices, and improves farm decision-making.",Technology,English,AI
+कोल्ड स्टोरेज क्या है?,कोल्ड स्टोरेज,कोल्ड स्टोरेज में फल और सब्जियों को कम तापमान पर सुरक्षित रखा जाता है।,Post Harvest,Hindi,storage
+कोल्ड स्टोरेज के क्या लाभ हैं?,कोल्ड स्टोरेज,इससे फलों और सब्जियों की खराब होने की संभावना कम होती है।,Post Harvest,Hindi,storage
+फूड प्रोसेसिंग क्या है?,फूड प्रोसेसिंग,कृषि उत्पादों को प्रसंस्करण करके मूल्यवर्धित उत्पाद बनाना फूड प्रोसेसिंग कहलाता है।,Food Processing,Hindi,processing
+कृषि उत्पादों की पैकेजिंग क्यों जरूरी है?,पैकेजिंग,अच्छी पैकेजिंग से उत्पाद सुरक्षित रहता है और बाजार मूल्य बढ़ता है।,Marketing,Hindi,packaging
+फलों की ग्रेडिंग क्या है?,ग्रेडिंग,"आकार, गुणवत्ता और रंग के आधार पर फलों का वर्गीकरण ग्रेडिंग कहलाता है।",Marketing,Hindi,quality
+जैविक प्रमाणन क्या है?,जैविक प्रमाणन,यह प्रमाणित करता है कि उत्पाद जैविक मानकों के अनुसार तैयार किया गया है।,Organic Farming,Hindi,certification
+एफपीओ क्या है?,FPO,किसान उत्पादक संगठन किसानों को सामूहिक रूप से विपणन और व्यापार करने में सहायता करता है।,Government,Hindi,FPO
+एफपीओ से किसानों को क्या लाभ होता है?,FPO,एफपीओ से किसानों की सौदेबाजी क्षमता और आय बढ़ सकती है।,Government,Hindi,organization
+कॉन्ट्रैक्ट फार्मिंग क्या है?,कॉन्ट्रैक्ट फार्मिंग,यह किसानों और खरीदारों के बीच पूर्व निर्धारित समझौते पर आधारित खेती है।,Marketing,Hindi,agreement
+ऑनलाइन कृषि उत्पाद कैसे बेचें?,ऑनलाइन बिक्री,ई-कॉमर्स प्लेटफॉर्म और सोशल मीडिया का उपयोग करके उत्पाद बेचे जा सकते हैं।,Marketing,Hindi,digital
+फलों को लंबे समय तक सुरक्षित कैसे रखें?,फल भंडारण,उचित तापमान और पैकेजिंग का उपयोग करें।,Post Harvest,Hindi,storage
+सब्जियों की गुणवत्ता कैसे बनाए रखें?,सब्जी भंडारण,कटाई के बाद उचित ग्रेडिंग और भंडारण करें।,Post Harvest,Hindi,quality
+कृषि स्टार्टअप क्या है?,स्टार्टअप,नई तकनीक या सेवाओं पर आधारित कृषि व्यवसाय को कृषि स्टार्टअप कहते हैं।,Technology,Hindi,startup
+कृषि में डिजिटल तकनीक का क्या महत्व है?,डिजिटल कृषि,डिजिटल तकनीक से खेती अधिक सटीक और लाभदायक बनती है।,Technology,Hindi,digital
+AI आधारित कृषि सलाह क्या है?,AI सलाह,"AI मौसम, मिट्टी और फसल के आधार पर सुझाव देता है।",Technology,Hindi,AI
+निर्यात के लिए फसल की गुणवत्ता क्यों जरूरी है?,निर्यात,अंतरराष्ट्रीय मानकों के अनुसार गुणवत्ता बनाए रखना आवश्यक है।,Export,Hindi,quality
+कृषि में मूल्य संवर्धन क्या है?,मूल्य संवर्धन,कच्चे उत्पाद को प्रसंस्करण करके अधिक मूल्य वाला उत्पाद बनाना।,Agribusiness,Hindi,business
+कृषि से अतिरिक्त आय कैसे बढ़ाएँ?,आय,"प्रसंस्करण, पशुपालन और मूल्य संवर्धन अपनाएँ।",Agribusiness,Hindi,income
+छोटे किसान अपनी आय कैसे बढ़ा सकते हैं?,छोटे किसान,"उन्नत तकनीक, एफपीओ और सरकारी योजनाओं का लाभ उठाएँ।",Agribusiness,Hindi,income
+AgriSmart AI किसानों की कैसे मदद करता है?,AgriSmart AI,"यह फसल, मौसम, मिट्टी और कृषि संबंधी जानकारी देकर निर्णय लेने में सहायता करता है।",Technology,Hindi,AI assistant
+What is farm mechanization?,farm mechanization,Farm mechanization uses machines to improve efficiency and reduce labor.,Machinery,English,equipment
+Benefits of digital payments in agriculture?,digital payments,Digital payments make transactions faster and more transparent.,Agribusiness,English,finance
+How to improve farm profitability?,profitability,"Reduce production costs, improve yield, and sell at better market prices.",Agribusiness,English,income
+What is sustainable agribusiness?,sustainable agribusiness,It focuses on profitable farming while protecting natural resources.,Agribusiness,English,sustainability
+How to build a successful farm business?,farm business,"Plan production, control costs, adopt technology, and understand market demand.",Agribusiness,English,business
