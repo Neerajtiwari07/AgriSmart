@@ -1,4 +1,4 @@
-﻿Question,Keywords,Answer,Category,Language,Topic
+Question,Keywords,Answer,Category,Language,Topic
 hello,,Namaste! Main AgriSmart AI hoon. Main kheti se jude sawalon me aapki madad kar sakta hoon.,General,,general
 what is wheat,,Wheat is a major Rabi crop grown during winter.,General,,general
 गेहूं क्या है,,गेहूं एक प्रमुख रबी फसल है।,General,,general
@@ -392,3 +392,67 @@ Benefits of digital payments in agriculture?,digital payments,Digital payments m
 How to improve farm profitability?,profitability,"Reduce production costs, improve yield, and sell at better market prices.",Agribusiness,English,income
 What is sustainable agribusiness?,sustainable agribusiness,It focuses on profitable farming while protecting natural resources.,Agribusiness,English,sustainability
 How to build a successful farm business?,farm business,"Plan production, control costs, adopt technology, and understand market demand.",Agribusiness,English,business
+When should tomato be planted?,"tomato,sowing,planting","Tomato planting time depends on the local climate, season, and variety.",Tomato,English,sowing
+टमाटर की बुवाई कब करें?,"टमाटर,बुवाई,रोपाई","टमाटर की बुवाई या रोपाई का समय स्थानीय जलवायु, मौसम और किस्म पर निर्भर करता है।",Tomato,Hindi,sowing
+What soil is suitable for tomato?,"tomato,soil,soil type","Tomato generally performs well in fertile, well-drained soil with suitable soil pH.",Tomato,English,soil
+टमाटर के लिए कौन सी मिट्टी अच्छी होती है?,"टमाटर,मिट्टी,soil",टमाटर के लिए उपजाऊ और अच्छी जल निकासी वाली मिट्टी उपयुक्त होती है।,Tomato,Hindi,soil
+How often should tomato be irrigated?,"tomato,irrigation,water","Tomato should receive regular irrigation according to soil moisture, weather, and crop growth stage.",Tomato,English,irrigation
+टमाटर में कितनी सिंचाई करनी चाहिए?,"टमाटर,सिंचाई,पानी","टमाटर में मिट्टी की नमी, मौसम और फसल की अवस्था के अनुसार नियमित सिंचाई करनी चाहिए।",Tomato,Hindi,irrigation
+How to improve tomato yield?,"tomato,yield,production","Use healthy planting material, suitable soil, balanced nutrition, proper irrigation, and timely pest and disease management.",Tomato,English,yield
+टमाटर की पैदावार कैसे बढ़ाएं?,"टमाटर,पैदावार,उत्पादन","स्वस्थ रोपण सामग्री, उपयुक्त मिट्टी, संतुलित पोषण, सही सिंचाई और समय पर कीट एवं रोग प्रबंधन करें।",Tomato,Hindi,yield
+How to select wheat seeds?,"wheat,seed,selection","Choose healthy, certified, and suitable seed varieties recommended for the local growing conditions.",Wheat,English,seed
+गेहूं के लिए बीज कैसे चुनें?,"गेहूं,बीज,चयन",स्थानीय परिस्थितियों के लिए अनुशंसित स्वस्थ और प्रमाणित बीज का चयन करें।,Wheat,Hindi,seed
+How to manage weeds in wheat?,"wheat,weed,weeding","Monitor the field regularly and use suitable cultural, mechanical, or recommended weed management practices.",Wheat,English,weed
+गेहूं में खरपतवार कैसे नियंत्रित करें?,"गेहूं,खरपतवार,निराई","खेत की नियमित निगरानी करें और उपयुक्त कृषि, यांत्रिक या अनुशंसित खरपतवार प्रबंधन उपाय अपनाएं।",Wheat,Hindi,weed
+धान की रोपाई कब करनी चाहिए?,"धान,रोपाई,transplanting","धान की रोपाई का समय किस्म, स्थानीय मौसम, पौध की अवस्था और पानी की उपलब्धता पर निर्भर करता है।",Rice,Hindi,transplanting
+How to reduce water use in rice farming?,"rice,water,irrigation,water saving",Use suitable water management practices and avoid unnecessary continuous flooding.,Rice,English,water
+धान में पानी की बचत कैसे करें?,"धान,पानी,सिंचाई,जल बचत",उपयुक्त जल प्रबंधन अपनाएं और आवश्यकता से अधिक लगातार पानी भरने से बचें।,Rice,Hindi,water
+How to select mustard seeds?,"mustard,seed,selection","Select healthy, good-quality, and locally recommended mustard seed varieties.",Mustard,English,seed
+सरसों के बीज का चयन कैसे करें?,"सरसों,बीज,चयन","स्वस्थ, अच्छी गुणवत्ता वाले और स्थानीय परिस्थितियों के लिए अनुशंसित सरसों के बीज चुनें।",Mustard,Hindi,seed
+How to control aphids in mustard?,"mustard,aphid,pest",Monitor the crop regularly and use integrated pest management or recommended control measures when needed.,Mustard,English,pest
+When should potato be planted?,"potato,planting,sowing","Potato planting time depends on the local climate, season, variety, and production conditions.",Potato,English,sowing
+आलू की बुवाई कब करें?,"आलू,बुवाई,रोपण","आलू की बुवाई का समय स्थानीय जलवायु, मौसम, किस्म और उत्पादन परिस्थितियों पर निर्भर करता है।",Potato,Hindi,sowing
+How to select potato seed tubers?,"potato,seed,tuber,selection","Use healthy, disease-free, and suitable-quality seed tubers recommended for the growing region.",Potato,English,seed
+आलू के बीज कंद कैसे चुनें?,"आलू,बीज,कंद,चयन","स्वस्थ, रोगमुक्त और क्षेत्र के लिए उपयुक्त गुणवत्ता वाले बीज कंद चुनें।",Potato,Hindi,seed
+मक्का की बुवाई कब करें?,"मक्का,बुवाई,रोपण","मक्का की बुवाई का समय स्थानीय जलवायु, मौसम, मिट्टी की नमी और उत्पादन प्रणाली पर निर्भर करता है।",Maize,Hindi,sowing
+How much water does maize need?,"maize,corn,water,irrigation","Maize water requirements vary with growth stage, soil, weather, and rainfall.",Maize,English,irrigation
+मक्का में सिंचाई कैसे करें?,"मक्का,सिंचाई,पानी","मक्का में सिंचाई फसल की अवस्था, मिट्टी, मौसम और वर्षा के अनुसार करनी चाहिए।",Maize,Hindi,irrigation
+When should soybean be sown?,"soybean,soya,sowing","Soybean sowing time depends on the local rainfall pattern, soil moisture, climate, and variety.",Soybean,English,sowing
+When should onion be planted?,"onion,planting,sowing","Onion planting time depends on the variety, local climate, season, and production method.",Onion,English,sowing
+प्याज की रोपाई कब करें?,"प्याज,रोपाई,बुवाई","प्याज की रोपाई का समय किस्म, स्थानीय जलवायु, मौसम और उत्पादन विधि पर निर्भर करता है।",Onion,Hindi,sowing
+मिट्टी की जांच क्यों जरूरी है?,"मिट्टी,जांच,पोषक तत्व",मिट्टी की जांच से पोषक तत्वों की स्थिति समझने और उपयुक्त खाद एवं मिट्टी प्रबंधन का निर्णय लेने में मदद मिलती है।,Soil,Hindi,soil
+How does soil pH affect crops?,"soil,pH,crop,nutrients",Soil pH affects nutrient availability and can influence crop growth and fertilizer efficiency.,Soil,English,soil
+मिट्टी का pH फसल को कैसे प्रभावित करता है?,"मिट्टी,pH,फसल,पोषक तत्व",मिट्टी का pH पोषक तत्वों की उपलब्धता को प्रभावित करता है और फसल की वृद्धि पर असर डाल सकता है।,Soil,Hindi,soil
+What are the signs of over irrigation?,"irrigation,over irrigation,water","Waterlogging, poor root growth, yellowing, and increased disease risk can indicate excessive irrigation.",Water Management,English,irrigation
+अधिक सिंचाई के क्या नुकसान हैं?,"सिंचाई,अधिक पानी,जलभराव","जलभराव, जड़ों की खराब वृद्धि, पत्तियों का पीलापन और रोग का बढ़ा जोखिम अधिक सिंचाई के संकेत या परिणाम हो सकते हैं।",Water Management,Hindi,irrigation
+How does drip irrigation save water?,"drip,irrigation,water saving",Drip irrigation delivers water closer to the root zone and can reduce unnecessary water loss.,Water Management,English,water
+ड्रिप सिंचाई से पानी कैसे बचता है?,"ड्रिप,सिंचाई,जल बचत",ड्रिप सिंचाई पानी को जड़ क्षेत्र के पास पहुंचाती है और अनावश्यक पानी की हानि कम करने में मदद कर सकती है।,Water Management,Hindi,water
+How can heavy rainfall affect crops?,"rainfall,heavy rain,crop,weather","Heavy rainfall can cause waterlogging, nutrient loss, erosion, lodging, and increased disease risk.",Weather,English,rain
+भारी बारिश से फसल को क्या नुकसान हो सकता है?,"बारिश,भारी बारिश,फसल,मौसम","भारी बारिश से जलभराव, पोषक तत्वों की हानि, मिट्टी का कटाव, फसल गिरना और रोग का जोखिम बढ़ सकता है।",Weather,Hindi,rain
+How can heat stress affect crops?,"heat,temperature,stress,crop","High temperatures can increase water demand, reduce growth, affect flowering, and lower crop performance.",Weather,English,weather
+अधिक गर्मी से फसल पर क्या असर पड़ता है?,"गर्मी,तापमान,फसल","अधिक तापमान से पानी की आवश्यकता बढ़ सकती है, वृद्धि प्रभावित हो सकती है और फूल आने पर असर पड़ सकता है।",Weather,Hindi,weather
+Why should fertilizer be based on soil testing?,"fertilizer,soil test,nutrients,NPK",Soil testing helps match fertilizer decisions with nutrient status and can reduce unnecessary fertilizer use.,Fertilizer,English,fertilizer
+मिट्टी की जांच के आधार पर खाद क्यों डालनी चाहिए?,"खाद,मिट्टी जांच,उर्वरक,NPK",मिट्टी की जांच से पोषक तत्वों की स्थिति के अनुसार खाद की योजना बनाने और अनावश्यक उपयोग कम करने में मदद मिलती है।,Fertilizer,Hindi,fertilizer
+एकीकृत कीट प्रबंधन क्या है?,"IPM,कीट,एकीकृत कीट प्रबंधन","एकीकृत कीट प्रबंधन में निगरानी, रोकथाम, जैविक उपाय और आवश्यकता अनुसार उपयुक्त नियंत्रण उपायों का संयोजन किया जाता है।",Pest,Hindi,IPM
+Why should crops be monitored for pests?,"pest,monitoring,crop",Regular monitoring helps detect pest problems early and supports timely management decisions.,Pest,English,pest
+फसल में कीटों की निगरानी क्यों करनी चाहिए?,"कीट,निगरानी,फसल",नियमित निगरानी से कीट की समस्या को जल्दी पहचानने और समय पर प्रबंधन का निर्णय लेने में मदद मिलती है।,Pest,Hindi,pest
+How can crop diseases be prevented?,"crop,disease,prevention","Use healthy planting material, maintain field hygiene, monitor crops regularly, and follow suitable disease management practices.",Disease,English,disease
+फसल में रोगों से बचाव कैसे करें?,"फसल,रोग,रोकथाम","स्वस्थ रोपण सामग्री का उपयोग करें, खेत की स्वच्छता बनाए रखें, नियमित निगरानी करें और उपयुक्त रोग प्रबंधन उपाय अपनाएं।",Disease,Hindi,disease
+Why is timely harvesting important?,"harvest,harvesting,crop","Timely harvesting can help maintain crop quality and reduce losses caused by over-maturity, weather, pests, or diseases.",Post Harvest,English,harvest
+समय पर फसल की कटाई क्यों जरूरी है?,"कटाई,फसल,harvest","समय पर कटाई से फसल की गुणवत्ता बनाए रखने और अधिक पकने, मौसम, कीट या रोग से होने वाले नुकसान को कम करने में मदद मिल सकती है।",Post Harvest,Hindi,harvest
+How can harvested crops be stored safely?,"storage,post harvest,crop","Harvested crops should be cleaned, properly dried when appropriate, protected from moisture and pests, and stored in suitable conditions.",Post Harvest,English,storage
+कटाई के बाद फसल को सुरक्षित कैसे रखें?,"भंडारण,कटाई,फसल,post harvest","फसल को साफ करें, आवश्यकता अनुसार अच्छी तरह सुखाएं, नमी और कीटों से बचाएं और उपयुक्त परिस्थितियों में भंडारित करें।",Post Harvest,Hindi,storage
+How can a farmer plan crop production?,"farm,planning,crop,production","Crop planning should consider soil, climate, water availability, input costs, expected demand, and available resources.",Farm Management,English,planning
+किसान फसल उत्पादन की योजना कैसे बनाएं?,"किसान,फसल,योजना,उत्पादन","फसल योजना बनाते समय मिट्टी, जलवायु, पानी की उपलब्धता, लागत, बाजार की मांग और उपलब्ध संसाधनों को ध्यान में रखें।",Farm Management,Hindi,planning
+How can AI help farmers?,"AI,artificial intelligence,farming,farmer","AI can support farmers through crop recommendations, weather analysis, disease detection, farm monitoring, and decision support.",Technology,English,AI
+AI किसानों की कैसे मदद कर सकता है?,"AI,कृत्रिम बुद्धिमत्ता,किसान,खेती","AI फसल सिफारिश, मौसम विश्लेषण, रोग पहचान, खेत की निगरानी और निर्णय सहायता में किसानों की मदद कर सकता है।",Technology,Hindi,AI
+प्रिसीजन फार्मिंग क्या है?,"प्रिसीजन फार्मिंग,स्मार्ट खेती,तकनीक",प्रिसीजन फार्मिंग में डेटा और तकनीक की मदद से खेत की परिस्थितियों के अनुसार फसल और कृषि संसाधनों का अधिक प्रभावी प्रबंधन किया जाता है।,Technology,Hindi,smart farming
+टमाटर में कौन सी खाद डालें?,"टमाटर,खाद,उर्वरक,fertilizer","टमाटर में खाद का चयन मिट्टी की जांच और फसल की अवस्था के आधार पर करें। संतुलित पोषण के लिए नाइट्रोजन, फास्फोरस और पोटाश वाले उर्वरकों का उपयोग किया जा सकता है।",Tomato,Hindi,fertilizer
+What fertilizer should be used for tomato?,"tomato,fertilizer,fertiliser","For tomato, select fertilizer based on soil testing and crop growth stage. Balanced nitrogen, phosphorus, and potassium nutrition can be used.",Tomato,English,fertilizer
+What fertilizer should be used for wheat?,"wheat,fertilizer","For wheat, select fertilizer according to soil testing and crop requirements. Balanced nitrogen, phosphorus, and potassium nutrition can be used.",Wheat,English,fertilizer
+धान में कौन सी खाद डालें?,"धान,खाद,उर्वरक,rice,fertilizer","धान में उर्वरक का चयन मिट्टी की जांच और फसल की आवश्यकता के आधार पर करें। संतुलित पोषण के लिए नाइट्रोजन, फास्फोरस और पोटाश का उपयोग किया जा सकता है।",Rice,Hindi,fertilizer
+What fertilizer should be used for rice?,"rice,fertilizer","For rice, select fertilizer according to soil testing and crop requirements. Balanced nitrogen, phosphorus, and potassium nutrition can be used.",Rice,English,fertilizer
+आलू में कौन सी खाद डालें?,"आलू,खाद,उर्वरक,potato,fertilizer","आलू में उर्वरक का चयन मिट्टी की जांच और फसल की आवश्यकता के आधार पर करें। संतुलित नाइट्रोजन, फास्फोरस और पोटाश पोषण बनाए रखें।",Potato,Hindi,fertilizer
+What fertilizer should be used for potato?,"potato,fertilizer","For potato, select fertilizer based on soil testing and crop requirements. Maintain balanced nitrogen, phosphorus, and potassium nutrition.",Potato,English,fertilizer
+सरसों में कौन सी खाद डालें?,"सरसों,खाद,उर्वरक,mustard,fertilizer",सरसों में उर्वरक का चयन मिट्टी की जांच और फसल की आवश्यकता के आधार पर करें। संतुलित पोषण के लिए आवश्यक पोषक तत्वों की पूर्ति करें।,Mustard,Hindi,fertilizer
+What fertilizer should be used for mustard?,"mustard,fertilizer","For mustard, select fertilizer according to soil testing and crop requirements and maintain balanced crop nutrition.",Mustard,English,fertilizer

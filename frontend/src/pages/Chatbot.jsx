@@ -89,13 +89,27 @@ function Chatbot() {
       console.log("Backend Response:", response.data);
 
       // Bot Reply
-      setChat((prev) => [
-        ...prev,
-        {
-          sender: "bot",
-          text: response.data.reply,
-        },
-      ]);
+  const reply = response.data.reply;
+
+  let botReply = "";
+
+    if (typeof reply === "string") {
+  botReply = reply;
+    } else if (reply && typeof reply === "object") {
+    botReply = JSON.stringify(reply);
+  } else {
+  botReply = String(reply ?? "");
+}
+
+console.log("BOT REPLY:", botReply);
+
+setChat((prev) => [
+  ...prev,
+  {
+    sender: "bot",
+    text: botReply,
+  },
+]);
 
       // Auto Navigation
       if (
@@ -112,16 +126,21 @@ function Chatbot() {
     } catch (error) {
       console.error(error);
 
-      let errorMessage = "❌ Unable to connect to server.";
+    let errorMessage = "❌ Unable to connect to server.";
 
-      if (error.response) {
-        errorMessage =
-          error.response.data.reply ||
-          JSON.stringify(error.response.data);
-      } else if (error.message) {
-        errorMessage = error.message;
-      }
+    if (error.response) {
+  const errorReply = error.response.data.reply;
 
+  if (typeof errorReply === "string") {
+    errorMessage = errorReply;
+  } else {
+    errorMessage = JSON.stringify(
+      error.response.data
+    );
+  }
+} else if (error.message) {
+  errorMessage = error.message;
+}
       setChat((prev) => [
         ...prev,
         {

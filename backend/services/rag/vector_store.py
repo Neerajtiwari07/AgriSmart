@@ -16,9 +16,11 @@ from services.rag.query_understanding import understand_query
 # ============================================================
 
 embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    model_kwargs={
+        "local_files_only": True
+    }
 )
-
 
 # ============================================================
 # LOAD FAISS DATABASE
