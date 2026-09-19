@@ -4,8 +4,16 @@ from fastapi.middleware.cors import CORSMiddleware
 import pickle
 import pandas as pd
 
+from pathlib import Path
+
+
 from services.chatbot import get_chat_response
 from routes.smart_crop import router as smart_crop_router
+
+from disease_predictor import predict_disease
+from disease_knowledge import get_disease_knowledge
+from routes.disease import router as disease_router
+
 
 
 # =========================================================
@@ -49,7 +57,7 @@ with open("models/crop_model.pkl", "rb") as f:
 # =========================================================
 
 app.include_router(smart_crop_router)
-
+app.include_router(disease_router)
 
 # =========================================================
 # Home
@@ -97,21 +105,6 @@ def predict(data: dict):
     }
 
 
-# =========================================================
-# Disease Detection
-# =========================================================
-
-@app.post("/detect-disease")
-async def detect_disease(file: UploadFile = File(...)):
-
-    return {
-        "disease": "Tomato Healthy",
-        "confidence": "98.5%",
-        "treatment": "No treatment required."
-    }
-
-
-# =========================================================
 # Weather by City
 # =========================================================
 
