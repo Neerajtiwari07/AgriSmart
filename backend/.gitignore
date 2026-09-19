@@ -1,0 +1,19 @@
+# Disease Detection Raw Datasets
+disease_detection/dataset/
+
+
+# Dataset split/raw images
+disease_detection/dataset/disease_split/
+disease_detection/dataset/unified_raw/
+disease_detection/dataset/plantvillage/
+disease_detection/dataset/rice_wheat_dataset/
+disease_detection/dataset/Sugarcane Leaf Disease Dataset/
+
+# Large model training backups
+disease_detection/models/crop_model_backup.pth
+
+# Raw disease datasets / image collections
+disease_detection/dataset/
+
+# Large training backup
+disease_detection/models/crop_model_backup.pth
